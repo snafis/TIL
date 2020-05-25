@@ -4,7 +4,7 @@ Jinja2==2.8
 MarkupSafe==0.23
 Pillow==2.5.1
 PyYAML==3.11
-Werkzeug==0.11.10
+Werkzeug==0.15.3
 beautifulsoup4==4.3.2
 click==6.6
 cssselect==0.9.1
