@@ -1,7 +1,7 @@
 Slick 3: Functional Relational Mapping for Mere Mortals Part 1
 ----
 
-Welcome to the fourth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. Today, we will get started with Slick. Slick(Scala Language-Integrated Connection Kit) is a powerful Scala library to work with relational databases. **Slick is not an ORM library**. It bases its implementation on **functional programming** and does not hide database behind an ORM layer giving you full control over when a database access should happen. It allows you to work with database just like you are working with Scala collections. Slick API is asynchronous in nature making it suitable for building reactive applications. Although Slick itself is asynchronous in nature, internally it uses JDBC which is a synchronous API. Slick is a big topic so today we will only cover the basics. I will write couple more parts to this blog.
+Today, we will get started with Slick. Slick(Scala Language-Integrated Connection Kit) is a powerful Scala library to work with relational databases. **Slick is not an ORM library**. It bases its implementation on **functional programming** and does not hide database behind an ORM layer giving you full control over when a database access should happen. It allows you to work with database just like you are working with Scala collections. Slick API is asynchronous in nature making it suitable for building reactive applications. Although Slick itself is asynchronous in nature, internally it uses JDBC which is a synchronous API. Slick is a big topic so today we will only cover the basics. I will write couple more parts to this blog.
 
 The core idea behind Slick is that as a developer you don't have to write SQL queries. Instead, library will create SQL for you if you build the query using the constructs provided by the library.
 
@@ -21,9 +21,6 @@ From the [Slick docs](http://slick.typesafe.com/doc/3.1.1/introduction.html#func
 > **The language integrated query model in Slick’s FRM is inspired by the LINQ project at Microsoft and leverages concepts tracing all the way back to the early work of Mnesia at Ericsson.**
 
 Slick supports most of the relational databases in the market. You can view full list [here](http://slick.typesafe.com/doc/3.1.1/supported-databases.html). You can work with all open source databases like MySQL, PostgreSQL for free. Databases like Oracle, SQL Server, and DB2 are available as closed extensions that you can use only after buying subscription.
-
-
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
 ## Github repository
 
@@ -101,7 +98,7 @@ object DataModel {
 
 The case class represent a `Task` datatype with six fields. This will map to a task table that will store a list of tasks that a user has to perform. As you can see, we have used different datatypes like String, Java 8 LocalDateTime, Set, and Long. LocalDateTime is part of Java 8 Date Time API. We have also given default values to some of these fields. This will allow us to not pass these value when we are constructing task objects. So, we can create a task by just providing `title` and `dueBy` values.
 
-> **Please refer to [my Java 8 tutorial](https://github.com/shekhargulati/java8-the-missing-tutorial/blob/master/08-date-time-api.md) if you are new to Java 8**
+> **Please refer to [my Java 8 tutorial](https://github.com/snafis/java8-the-missing-tutorial/blob/master/08-date-time-api.md) if you are new to Java 8**
 
 Now let's create a table mapping for our Task case class.
 
@@ -356,8 +353,3 @@ The `listTasksAction` makes a `select "title", "description", "createdAt", "dueB
 ## Conclusion
 
 Slick is a powerful library to interact with relational databases. Today, we have just scratched the surface of this feature rich library. You leant how to define table definition, insert data, perform `select *` query. I will write couple more blogs on Slick to cover it in more details. So stay tuned!
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/6](https://github.com/shekhargulati/52-technologies-in-2016/issues/6).
-
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/04-slick)](https://github.com/igrigorik/ga-beacon)

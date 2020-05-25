@@ -1,4 +1,4 @@
-package com.shekhargulati.fitman.api
+package com.snafis.fitman.api
 
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.Controller

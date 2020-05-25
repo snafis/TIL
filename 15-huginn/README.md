@@ -1,11 +1,11 @@
 Airline Bot Platform with Huginn
 -----
 
-Welcome to fifteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I participated in a day long Hackathon organized by an Airline. They were looking for ideas that could help improve their customer travel experience. I, along with my good friend [Rahul](https://www.linkedin.com/in/rahul-sharma-72531111) decided to build a bot platform using [Huginn](https://github.com/cantino/huginn) that can perform a lot of tasks for which we normally use mobile apps. Our goal was to show them that they should think beyond mobile apps and look into the world of bots as bots can be less intrusive, more secure, and does not require installation. ***Apps are dead, long live bots.***
+Welcome to fifteenth week of [TIL](https://github.com/snafis/TIL) blog series. This week I participated in a day long Hackathon organized by an Airline. They were looking for ideas that could help improve their customer travel experience. I, along with my good friend [Rahul](https://www.linkedin.com/in/rahul-sharma-72531111) decided to build a bot platform using [Huginn](https://github.com/cantino/huginn) that can perform a lot of tasks for which we normally use mobile apps. Our goal was to show them that they should think beyond mobile apps and look into the world of bots as bots can be less intrusive, more secure, and does not require installation. ***Apps are dead, long live bots.***
 
 Bots are small applications that can perform certain tasks on user's behalf, or react to events, or send notifications. To show them the power of bots, we decided to build a bag tracking system using bots that sends an SMS notification to the passenger as soon as the flight lands with information  whether their bag was loaded in the same flight or not. We integrated our bots platform with a mock checkin system so as soon as the passenger checks in, a bot is created for the passenger that tracks their bag journey. I find it very annoying that after waiting for an hour or more at the airport conveyer belt, I am told that my bag was not loaded in the same flight. I have lost my bag three times at three different international airports Heathrow Airport London, Adolfo Suárez Madrid–Barajas Airport, and Amsterdam Airport Schiphol and each time I had to go through the painful process.
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016).**
+> **This blog is part of my year long blog series [TIL](https://github.com/snafis/TIL).**
 
 ## Why bots?
 
@@ -267,9 +267,3 @@ The event flow in this use case is shown below.
 The **Bag Lost Commander Bot** is subscribed for messages of type `LOADED_ON_AIRCRAFT`. This bot will disable its child bots if it receives the `LOADED_ON_AIRCRAFT` message. Otherwise, it will send the `BAG_LOST` message to the customer.
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/19](https://github.com/shekhargulati/52-technologies-in-2016/issues/19).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/15-huginn)](https://github.com/igrigorik/ga-beacon)

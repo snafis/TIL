@@ -13,7 +13,7 @@ For Apache Maven users, please add following to your pom.xml.
 ```xml
 <dependencies>
     <dependency>
-        <groupId>com.shekhargulati</groupId>
+        <groupId>com.snafis</groupId>
         <artifactId>strman</artifactId>
         <version>0.1.0</version>
         <type>jar</type>
@@ -24,7 +24,7 @@ For Apache Maven users, please add following to your pom.xml.
 Gradle users can add following to their build.gradle file.
 
 ```
-compile(group: 'com.shekhargulati', name: 'strman', version: '0.1.0', ext: 'jar'){
+compile(group: 'com.snafis', name: 'strman', version: '0.1.0', ext: 'jar'){
         transitive=true
 }
 ```

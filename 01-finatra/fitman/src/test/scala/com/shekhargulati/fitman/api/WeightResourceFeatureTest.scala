@@ -1,6 +1,6 @@
-package com.shekhargulati.fitman.api
+package com.snafis.fitman.api
 
-import com.shekhargulati.fitman.FitmanServer
+import com.snafis.fitman.FitmanServer
 import com.twitter.finagle.http.Status
 import com.twitter.finatra.http.test.EmbeddedHttpServer
 import com.twitter.inject.server.FeatureTest

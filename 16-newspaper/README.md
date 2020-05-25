@@ -1,7 +1,7 @@
 Building `Read It Later` App with Python Newspaper Library
 -----
 
-Welcome to sixteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will show you how to build a simple yet working **Read It Later** application using Twitter likes (or favorites). I rely on my Twitter feed for my daily reading recommendations. I check Twitter several time during the day and whenever I find any article that interests me I like it so that I can read it later. In this tutorial, you will learn how to build `Read It Later` application using Python programming language. We will make use of article extraction to extract relevant content from the urls.
+Welcome to sixteenth week of [TIL](https://github.com/snafis/TIL) blog series. This week I will show you how to build a simple yet working **Read It Later** application using Twitter likes (or favorites). I rely on my Twitter feed for my daily reading recommendations. I check Twitter several time during the day and whenever I find any article that interests me I like it so that I can read it later. In this tutorial, you will learn how to build `Read It Later` application using Python programming language. We will make use of article extraction to extract relevant content from the urls.
 
 To build this application, we will use following Python libraries:
 
@@ -13,7 +13,7 @@ By the end of this tutorial, you will have a simple yet working application to v
 
 ![](images/stories.jpg)
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+> **This blog is part of my year long blog series [TIL](https://github.com/snafis/TIL)**
 
 ## What is Newspaper?
 
@@ -47,7 +47,7 @@ To follow this blog, you need to have following on your machine:
 
 ## Github Repository
 
-The code for demo application is available on github at [dailyreads](https://github.com/shekhargulati/dailyreads).
+The code for demo application is available on github at [dailyreads](https://github.com/snafis/dailyreads).
 
 ## Step 1: Setting up environment
 
@@ -267,9 +267,3 @@ I have used a [free Twitter bootstrap theme](http://startbootstrap.com/template-
 ```
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/20](https://github.com/shekhargulati/52-technologies-in-2016/issues/20).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/16-newspaper)](https://github.com/igrigorik/ga-beacon)

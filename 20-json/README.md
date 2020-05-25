@@ -1,7 +1,7 @@
 5 open source projects that will make working with JSON awesome and fun
 -------
 
-Welcome to twentieth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will share my 5 favorite open source projects that makes working with JSON easy and fun. I use them on regular basis and find them very useful whenever I am working with JSON. JSON (JavaScript Object Notation) is the most popular data-interchange format. Most of the REST APIs produce and consume JSON, there are many databases that either directly stores JSON or store JSON in binary format, we even have tools and frameworks that use JSON files for configuration.
+Welcome to twentieth week of [TIL](https://github.com/snafis/TIL) blog series. This week I will share my 5 favorite open source projects that makes working with JSON easy and fun. I use them on regular basis and find them very useful whenever I am working with JSON. JSON (JavaScript Object Notation) is the most popular data-interchange format. Most of the REST APIs produce and consume JSON, there are many databases that either directly stores JSON or store JSON in binary format, we even have tools and frameworks that use JSON files for configuration.
 
 Let's get started.
 
@@ -200,9 +200,3 @@ $ cat data.json | json2csv -k title,id > result.csv
 
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/25](https://github.com/shekhargulati/52-technologies-in-2016/issues/25).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/20-json)](https://github.com/igrigorik/ga-beacon)

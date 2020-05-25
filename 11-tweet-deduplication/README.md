@@ -1,17 +1,17 @@
 Tweet Deduplication
 ---
 
-Welcome to the eleventh blog of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)  blog series. This week I decided to write a tweet deduplication library. The library will give you a stream of deduplicated tweets. The definition of duplicates can vary depending on the application. For my usecase, any tweet which has same text or talks about same URL is a duplicate.
+Welcome to the eleventh blog of [TIL](https://github.com/snafis/TIL)  blog series. This week I decided to write a tweet deduplication library. The library will give you a stream of deduplicated tweets. The definition of duplicates can vary depending on the application. For my usecase, any tweet which has same text or talks about same URL is a duplicate.
 
-`tweet-deduplication` library provides deduplication functionality over tweets. It uses [rx-tweet-stream](https://github.com/shekhargulati/rx-tweet-stream) to get a RxJava Observable over a twitter status stream. `rx-tweet-stream` wraps Twitter4J Streaming API to provide an Observable of tweets. `tweet-deduplication` API uses JDK 8, RxJava, and Twitter4J.
+`tweet-deduplication` library provides deduplication functionality over tweets. It uses [rx-tweet-stream](https://github.com/snafis/rx-tweet-stream) to get a RxJava Observable over a twitter status stream. `rx-tweet-stream` wraps Twitter4J Streaming API to provide an Observable of tweets. `tweet-deduplication` API uses JDK 8, RxJava, and Twitter4J.
 
-The definition of duplicate depends on the application. The default implementation assumes a tweet to be a duplicate if it is talking about same URL or if it has same text. URLs are normalized using the normalizations described in [RFC 3986](https://tools.ietf.org/html/rfc3986). This allows us to determine if two syntactically different URLs are equivalent for example `https://www.github.com/?` is same as `https://github.com`. URL , I will use [urlcleaner](https://github.com/shekhargulati/urlcleaner) library that I have written over the weekend as well.
+The definition of duplicate depends on the application. The default implementation assumes a tweet to be a duplicate if it is talking about same URL or if it has same text. URLs are normalized using the normalizations described in [RFC 3986](https://tools.ietf.org/html/rfc3986). This allows us to determine if two syntactically different URLs are equivalent for example `https://www.github.com/?` is same as `https://github.com`. URL , I will use [urlcleaner](https://github.com/snafis/urlcleaner) library that I have written over the weekend as well.
 
 Text comparison is done using SHA1 hash. Two tweets are considered same if their SHA1 hashes are same.
 
 ## Github repository
 
-The code for `tweet-deduplication` is available on github: [tweet-deduplication](https://github.com/shekhargulati/tweet-deduplication).
+The code for `tweet-deduplication` is available on github: [tweet-deduplication](https://github.com/snafis/tweet-deduplication).
 
 
 Getting Started
@@ -24,7 +24,7 @@ For Apache Maven users, please add following to your pom.xml.
 ```xml
 <dependencies>
     <dependency>
-        <groupId>com.shekhargulati.deduplication.tweet</groupId>
+        <groupId>com.snafis.deduplication.tweet</groupId>
         <artifactId>tweet-deduplication</artifactId>
         <version>0.1.0</version>
         <type>jar</type>
@@ -35,7 +35,7 @@ For Apache Maven users, please add following to your pom.xml.
 Gradle users can add following to their build.gradle file.
 
 ```groovy
-compile(group: 'com.shekhargulati.deduplication.tweet', name: 'tweet-deduplication', version: '0.1.0', ext: 'jar')
+compile(group: 'com.snafis.deduplication.tweet', name: 'tweet-deduplication', version: '0.1.0', ext: 'jar')
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ export twitter4j.oauth.accessTokenSecret=***************************************
 ```
 
 ```java
-import com.shekhargulati.deduplication.tweet.TweetDeDuplicator;
+import com.snafis.deduplication.tweet.TweetDeDuplicator;
 
 TweetDeDuplicator tweetDeDuplicator = TweetDeDuplicator.getDeduplicatorWithInmemoryRepositories();
 tweetDeDuplicator.deduplicate("Your Twitter Search Term").subscribe(System.out::println);
@@ -73,7 +73,7 @@ tweetDeDuplicator.deduplicate(cb.build(), "Your Twitter Search Term").subscribe(
 You can deduplicate multiple search items at once as well. The code shown below will give you deduplicated content across `java`, `programming`, and `rxjava` search terms.
 
 ```java
-import com.shekhargulati.deduplication.tweet.TweetDeDuplicator;
+import com.snafis.deduplication.tweet.TweetDeDuplicator;
 
 TweetDeDuplicator tweetDeDuplicator = TweetDeDuplicator.getDeduplicatorWithInmemoryRepositories();
 tweetDeDuplicator.deduplicate("java","programming","rxjava").subscribe(System.out::println);
@@ -82,7 +82,7 @@ tweetDeDuplicator.deduplicate("java","programming","rxjava").subscribe(System.ou
 You can also deduplicate tweets for specify users as shown below. The code shown below will track users with id 1,2,3,or 4 and give you deduplicated stream across them. You can follow at max 200 users.
 
 ```java
-import com.shekhargulati.deduplication.tweet.TweetDeDuplicator;
+import com.snafis.deduplication.tweet.TweetDeDuplicator;
 
 TweetDeDuplicator tweetDeDuplicator = TweetDeDuplicator.getDeduplicatorWithInmemoryRepositories();
 tweetDeDuplicator.deduplicate(1,2,3,4).subscribe(System.out::println);

@@ -1,5 +1,5 @@
 FROM openjdk:8
-MAINTAINER "Shekhar Gulati"
+MAINTAINER "Shifath Nafis"
 ENV APP_DIR /app
 ADD taskman.jar $APP_DIR/
 WORKDIR $APP_DIR

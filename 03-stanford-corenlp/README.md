@@ -1,7 +1,7 @@
 Sentiment Analysis in Scala with Stanford CoreNLP
 -----
 
-So far in this [series](https://github.com/shekhargulati/52-technologies-in-2016), we have looked at [finatra](../01-finatra) and [sbt](../02-sbt) open-source Scala projects. This week I decided to learn Stanford CoreNLP library for performing sentiment analysis of unstructured text in Scala.
+So far in this series, we have looked at [finatra](../01-finatra) and [sbt](../02-sbt) open-source Scala projects. This week I decided to learn Stanford CoreNLP library for performing sentiment analysis of unstructured text in Scala.
 
 Sentiment analysis or opinion mining is a field that uses natural language processing to analyze sentiments in a given text. It has applications in many domains ranging from marketing to customer service. Few years back, I wrote a simple Java application using [Naive Bayes classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier) to determine whether people liked a movie or not based on sentiment analysis of tweets about a movie.
 
@@ -93,7 +93,7 @@ Let's now discuss about `SentimentAnalyzer`. Full source code of `SentimentAnaly
 ```scala
 import java.util.Properties
 
-import com.shekhargulati.sentiment_analyzer.Sentiment.Sentiment
+import com.snafis.sentiment_analyzer.Sentiment.Sentiment
 import edu.stanford.nlp.ling.CoreAnnotations
 import edu.stanford.nlp.neural.rnn.RNNCoreAnnotations
 import edu.stanford.nlp.pipeline.{Annotation, StanfordCoreNLP}
@@ -164,7 +164,3 @@ def sentiment(input: String): List[(String, Sentiment)] = Option(input) match {
   case _ => throw new IllegalArgumentException("input can't be null or empty")
 }
 ```
-
-That's all for this week. Please provide your valuable feedback by adding a comment to https://github.com/shekhargulati/52-technologies-in-2016/issues/5.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/03-stanford-corenlp)](https://github.com/igrigorik/ga-beacon)

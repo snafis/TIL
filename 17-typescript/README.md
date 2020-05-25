@@ -1,7 +1,7 @@
 Let's Learn TypeScript
 -------
 
-Welcome to seventeenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I decided to learn TypeScript so I will discuss how you can get started with TypeScript. [TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript, which means that it supports all the JavaScript features plus it adds static typing to the language. TypeScript is transpiled to JavaScript. According to [wikipedia](https://en.wikipedia.org/wiki/Source-to-source_compiler), transpiling is the process of compiling source code written in one programming language into another programming language. **JavaScript is the new byte code**. There are [many programming languages](https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js) that compile down to JavaScript. MicroSoft is behind the development of TypeScript and one the reason they created TypeScript is to make it easy to build large scale JavaScript applications. The TypeScript compiler is itself written in TypeScript, transcompiled to JavaScript and licensed under the Apache 2 License.
+Welcome to seventeenth week of [TIL](https://github.com/snafis/TIL) blog series. This week I decided to learn TypeScript so I will discuss how you can get started with TypeScript. [TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript, which means that it supports all the JavaScript features plus it adds static typing to the language. TypeScript is transpiled to JavaScript. According to [wikipedia](https://en.wikipedia.org/wiki/Source-to-source_compiler), transpiling is the process of compiling source code written in one programming language into another programming language. **JavaScript is the new byte code**. There are [many programming languages](https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js) that compile down to JavaScript. MicroSoft is behind the development of TypeScript and one the reason they created TypeScript is to make it easy to build large scale JavaScript applications. The TypeScript compiler is itself written in TypeScript, transcompiled to JavaScript and licensed under the Apache 2 License.
 
 JavaScript as most of you already know is a dynamic typed programming language. This means that type checking is done at runtime. This allows you to rapidly prototype in JavaScript without worrying about type safety. Strong typing or static typing on the other hand perform type checking at the compile time. If you assign number type to a variable then you can't assign anything other than number to that variable else the compile will show error. The advantage of strong typing include better tooling support like auto complete and refactoring.
 
@@ -67,8 +67,8 @@ likes++;
 console.log(likes);
 var isActive = true;
 var usernameExists = false;
-var username = "shekhargulati";
-var fullname = 'Shekhar Gulati';
+var username = "snafis";
+var fullname = 'Shifath Nafis';
 ```
 
 ## Using template literals
@@ -77,7 +77,7 @@ ECMAScript 6 introduced template literals which allow you to embed expressions i
 
 ```typescript
 let title: string = "Learning TypeScript";
-let fullname = "Shekhar Gulati"
+let fullname = "Shifath Nafis"
 let summary = `${fullname} is ${title} this weekend.`
 ```
 
@@ -441,9 +441,3 @@ class Pair<T>{
 ```
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/22](https://github.com/shekhargulati/52-technologies-in-2016/issues/22).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/17-typescript)](https://github.com/igrigorik/ga-beacon)

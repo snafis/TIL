@@ -1,4 +1,4 @@
-package com.shekhargulati.peoplecounter;
+package com.snafis.peoplecounter;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;

@@ -12,7 +12,7 @@ var storyExists = false;
 var title = "Learning TypeScript";
 var description = 'Learning TypeScript Today!';
 // String literals
-var fullname = "Shekhar Gulati";
+var fullname = "Shifath Nafis";
 var summary = fullname + " is " + title + " this weekend.";
 // Arrays 
 var tags = ["javascript", "programming"];

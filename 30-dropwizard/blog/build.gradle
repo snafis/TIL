@@ -1,4 +1,4 @@
-group 'com.shekhargulati'
+group 'com.snafis'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'

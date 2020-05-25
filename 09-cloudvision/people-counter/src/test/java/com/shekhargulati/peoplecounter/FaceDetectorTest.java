@@ -1,4 +1,4 @@
-package com.shekhargulati.peoplecounter;
+package com.snafis.peoplecounter;
 
 import com.google.api.services.vision.v1.model.FaceAnnotation;
 import org.junit.Test;

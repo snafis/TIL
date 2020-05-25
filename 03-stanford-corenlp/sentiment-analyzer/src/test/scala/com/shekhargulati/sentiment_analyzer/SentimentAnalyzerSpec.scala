@@ -1,4 +1,4 @@
-package com.shekhargulati.sentiment_analyzer
+package com.snafis.sentiment_analyzer
 
 import org.scalatest.{FunSpec, Matchers}
 

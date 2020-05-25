@@ -1,7 +1,7 @@
 Building An Android Application Part 2
 ---
 
-Welcome to twenty sixth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week we will extend the Android application that we started developing in [week 23](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/23-android-part1). By the end of part 1, our Android application could take a photo, store that photo in an application specific album, and finally preview the captured photo in the same activity. This week we will achieve the following:
+Welcome to twenty sixth post of [TIL](https://github.com/snafis/TIL) blog series. This week we will extend the Android application that we started developing in [week 23](https://github.com/snafis/TIL/tree/master/23-android-part1). By the end of part 1, our Android application could take a photo, store that photo in an application specific album, and finally preview the captured photo in the same activity. This week we will achieve the following:
 
 1. Create a new activity `PreviewActivity` that will be responsible for image preview.
 2. Use [Glide](https://github.com/bumptech/glide) library for preview.
@@ -9,7 +9,7 @@ Welcome to twenty sixth post of [52-technologies-in-2016](https://github.com/she
 
 ## Prerequisite
 
-Before you start working with this blog make sure you have read [part 1](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/23-android-part1) blog. You need following on your machine:
+Before you start working with this blog make sure you have read [part 1](https://github.com/snafis/TIL/tree/master/23-android-part1) blog. You need following on your machine:
 
 1. Your machine should have JDK 6 or above installed.
 
@@ -18,7 +18,7 @@ Before you start working with this blog make sure you have read [part 1](https:/
 3. You will need source code of the part 1. The application source code is hosted on Github. To checkout part 1 source code, execute the following commands.
 
   ```bash
-  $ git clone git@github.com:shekhargulati/missing-kid-tracker.git
+  $ git clone git@github.com:snafis/missing-kid-tracker.git
   $ git checkout -b part2 part1
   ```
 
@@ -181,7 +181,7 @@ Also, you have to update `activity_preview.xml` so that can we can render image 
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.shekhargulati.missingkidtracker.PreviewActivity">
+    tools:context="com.snafis.missingkidtracker.PreviewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -427,6 +427,6 @@ When you will press the share button, then you will see a list of applications t
 
 ------
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/32](https://github.com/shekhargulati/52-technologies-in-2016/issues/32).
+ 32]/32).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/26-android-part2)](https://github.com/igrigorik/ga-beacon)
+(/26-android-part2)]

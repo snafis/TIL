@@ -1,7 +1,7 @@
 Learn GoLang For Great Good -- Part 1
 ---------
 
-Welcome to twenty seventh post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. Last few months I was thinking of learning [Go programming language](https://golang.org/). Go is an open source, fast, general purpose programming language by Google. Go caught my attention back in 2013 when I learnt about Docker. Docker, a containerization platform is entirely written in Go. Since then I have seen many software tools written in Go programming language. Both Cloud Foundry and OpenShift were rewritten in Go. So, finally I decided to learn Go this month.
+Welcome to twenty seventh post of [TIL](https://github.com/snafis/TIL) blog series. Last few months I was thinking of learning [Go programming language](https://golang.org/). Go is an open source, fast, general purpose programming language by Google. Go caught my attention back in 2013 when I learnt about Docker. Docker, a containerization platform is entirely written in Go. Since then I have seen many software tools written in Go programming language. Both Cloud Foundry and OpenShift were rewritten in Go. So, finally I decided to learn Go this month.
 
 Go is an object oriented programming language with memory management builtin. If you are coming from a language like C or C++ where your program needs to handle memory allocation and deallocation then you will be relieved that Go handles this error prone task for you. Go has [modern, low-pause, concurrent garbage collector](https://docs.google.com/document/d/1kBx98ulj5V5M9Zdeamy7v6ofZXX3yPziAf0V27A64Mo/preview?pli=10). Another feature that makes Go a popular choice is its powerful concurrency support. Go's concurrency support consists of goroutines and channels. GoRoutines are based on [Communicating Sequential Processes](https://en.wikipedia.org/wiki/Communicating_sequential_processes) or CSP. The basic premise is that goroutines run concurrently with other goroutines but they share a channel. Channels allow safer communication between goroutines, one goroutine can put data into the channel and other goroutine consumes that data. Later in the series we will cover concurrency aspect of Go in detail.
 
@@ -22,7 +22,7 @@ Before you can start with the hands-on tutorial please make sure you have follow
   $ env |grep GOPATH
   ```
   ```
-  GOPATH=/Users/shekhargulati
+  GOPATH=/Users/snafis
   ```
 
 2. Select a text editor of your choice for writing Go programs. You can find full listing on the [Go wiki](https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins). I personally prefer Atom.
@@ -33,7 +33,7 @@ Before you can start with the hands-on tutorial please make sure you have follow
 
 ## Program 1: Greeter
 
-Let's start by writing a simple Go program that will greet a user with a welcome message. This is a canonical "Hello, World" program. The program will print `Welcome, <user>` to the console. **`<user>` will be replaced by user's name like `Welcome, Shekhar Gulati`.**
+Let's start by writing a simple Go program that will greet a user with a welcome message. This is a canonical "Hello, World" program. The program will print `Welcome, <user>` to the console. **`<user>` will be replaced by user's name like `Welcome, Shifath Nafis`.**
 
 Now that we know what program we want to write let's spend some time thinking about how we might write such a program in any programming language. Think about it I am waiting!
 
@@ -56,7 +56,7 @@ package main
 import "fmt"
 
 func main() {
-  fmt.Println("Welcome, Shekhar Gulati")
+  fmt.Println("Welcome, Shifath Nafis")
 }
 ```
 
@@ -74,7 +74,7 @@ To run the program, you will use the `go run` command shown below. The command s
 $ go run greeter.go
 ```
 ```
-Welcome, Shekhar Gulati
+Welcome, Shifath Nafis
 ```
 
 > **You can build a binary for your program using the `go build` command and then execute the binary. For example, we can build greeter binary using the `go build greeter.go` and then run the program using `./greeter` command.**
@@ -87,7 +87,7 @@ package main
 import f "fmt"
 
 func main() {
-  f.Println("Welcome, Shekhar Gulati")
+  f.Println("Welcome, Shifath Nafis")
 }
 ```
 
@@ -129,11 +129,11 @@ Let's understand the code written above.
 
 2. Next, we concatenated the two variables using the `+` operator. `+` is an overloaded method. Go compiler figures out what to do based on the type of the arguments. As we are working with strings, so concatenation is performed.
 
-3. Finally, we printed the `fullName` to the console using the `fmt.Println` function. One thing I liked about `Println` function is that if you pass it multiple arguments then it automatically add space between arguments. So, both the `fmt.Println` statements will print `Shekhar Gulati`.
+3. Finally, we printed the `fullName` to the console using the `fmt.Println` function. One thing I liked about `Println` function is that if you pass it multiple arguments then it automatically add space between arguments. So, both the `fmt.Println` statements will print `Shifath Nafis`.
 
 > There is also a shorthand notation for declaring and initializing a variable in one go as shown below.
   ```go
-  name := "Shekhar Gulati"
+  name := "Shifath Nafis"
   ```
 
 To run the program, we will use the `go run` command as shown below. The command shown below assumes that you are inside the `programs` directory where you have created `concatenator.go` file.
@@ -142,8 +142,8 @@ To run the program, we will use the `go run` command as shown below. The command
 $ go run concatenator.go
 ```
 ```
-Shekhar Gulati
-Shekhar Gulati
+Shifath Nafis
+Shifath Nafis
 ```
 
 ------
@@ -678,6 +678,6 @@ map[c:4]
 
 ------
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/36](https://github.com/shekhargulati/52-technologies-in-2016/issues/36).
+ 36]/36).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/27-golang-part1)](https://github.com/igrigorik/ga-beacon)
+(/27-golang-part1)]

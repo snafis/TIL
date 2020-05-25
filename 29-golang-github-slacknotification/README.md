@@ -1,7 +1,7 @@
 Go Language - GitHub System Status API & Slack Notifications
 ---------
 
-Welcome to twenty-ninth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. In a previous [episode](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/27-learn-golang-for-great-good/README.md), we covered the basics of [Golang](https://golang.org/) and saw a number of sample programs to under the basic features in the language. In this episode, we are going to investigate a few more features of the language and combine that into a real life application where we can monitor the status of the GitHub System via its Status API and report its current status directly into a Slack Team page.
+Welcome to twenty-ninth post of [TIL](https://github.com/snafis/TIL) blog series. In a previous [episode](https://github.com/snafis/TIL/blob/master/27-learn-golang-for-great-good/README.md), we covered the basics of [Golang](https://golang.org/) and saw a number of sample programs to under the basic features in the language. In this episode, we are going to investigate a few more features of the language and combine that into a real life application where we can monitor the status of the GitHub System via its Status API and report its current status directly into a Slack Team page.
 
 In summary, we are going to do the following:
 - Understand the GitHub System Status API
@@ -197,6 +197,6 @@ If all goes well, you will see the current GitHub Status being reported in your 
 
 ![](images/slacknotification1.png)
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/40](https://github.com/shekhargulati/52-technologies-in-2016/issues/40).
+ 40]/40).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/29-golang-romin-http)](https://github.com/igrigorik/ga-beacon)
+(/29-golang-romin-http)]

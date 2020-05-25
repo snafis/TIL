@@ -1,7 +1,7 @@
 ArangoDB: Polyglot Persistence Without Cost
 ------
 
-Welcome to thirteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week we will learn about ArangoDB. [ArangoDB](https://www.arangodb.com/) is an open source NoSQL database that provides flexible data model. You can use ArangoDB to model data using combination of document, graph, and key value data modeling styles. Last few years, polyglot persistence has become mainstream. Polyglot persistence as described by [Martin Fowler](http://martinfowler.com/articles/nosql-intro-original.pdf),
+Welcome to thirteenth week of [TIL](https://github.com/snafis/TIL) blog series. This week we will learn about ArangoDB. [ArangoDB](https://www.arangodb.com/) is an open source NoSQL database that provides flexible data model. You can use ArangoDB to model data using combination of document, graph, and key value data modeling styles. Last few years, polyglot persistence has become mainstream. Polyglot persistence as described by [Martin Fowler](http://martinfowler.com/articles/nosql-intro-original.pdf),
 
 > **Polyglot Persistence is using multiple data storage technologies, chosen based upon the way data is being used by individual applications or components of single application.**
 
@@ -168,7 +168,7 @@ We will import 159 `json` documents that are stored in the `jobs.json` file. I m
 
 As you can see, we have details about the company that has posted the job, job title, skills required, location in the form of latitude and longitude, and address of the job posting.
 
-To import json data file you will run the following command. You can download `jobs.json` from the [repository](https://raw.githubusercontent.com/shekhargulati/52-technologies-in-2016/master/13-arangodb/localjobs/jobs.json). We are running the `arangoimp` command from inside the same directory that contains `jobs.json` file.
+To import json data file you will run the following command. You can download `jobs.json` from the [repository](https://raw.githubusercontent.com/snafis/TIL/master/13-arangodb/localjobs/jobs.json). We are running the `arangoimp` command from inside the same directory that contains `jobs.json` file.
 
 ```bash
 $ arangoimp --server.database localjobs --file "jobs.json" --type json --collection "jobs" --create-collection true --create-collection-type "document"
@@ -484,8 +484,4 @@ arangosh [localjobs]> db.jobs.near(37.3394444, -121.8938889).limit(5).toArray().
 
 ## Conclusion
 
-That's all for this week. ArangoDB is a powerful database that provides multi model capabilities. You can refer to its [documentation](https://docs.arangodb.com/) to learn about other capabilities. I will revisit ArangoDB later in this series to showcase how we can build a Java Spring application with it. We will also look at its graph data model support.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/17](https://github.com/shekhargulati/52-technologies-in-2016/issues/17).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/13-arangodb)](https://github.com/igrigorik/ga-beacon)
+ ArangoDB is a powerful database that provides multi model capabilities. You can refer to its [documentation](https://docs.arangodb.com/) to learn about other capabilities. I will revisit ArangoDB later in this series to showcase how we can build a Java Spring application with it. We will also look at its graph data model support.

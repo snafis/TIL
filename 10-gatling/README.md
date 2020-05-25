@@ -1,13 +1,13 @@
 Gatling: The Ultimate Load Testing Tools for Programmers
 --------
 
-Welcome to the tenth blog of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)  blog series. **Gatling** is a high performance open source **load testing** tool built on top of Scala, Netty, and Akka. It is a next generation, modern load testing tools very different from existing tools like Apache JMeter. **[Load testing](https://en.wikipedia.org/wiki/Load_testing)** is conducted to understand behavior of an application under load. You put load on the application by simulating users and measure its response time to understand how application will behave under both normal and anticipated peak load conditions.
+Welcome to the tenth blog of [TIL](https://github.com/snafis/TIL)  blog series. **Gatling** is a high performance open source **load testing** tool built on top of Scala, Netty, and Akka. It is a next generation, modern load testing tools very different from existing tools like Apache JMeter. **[Load testing](https://en.wikipedia.org/wiki/Load_testing)** is conducted to understand behavior of an application under load. You put load on the application by simulating users and measure its response time to understand how application will behave under both normal and anticipated peak load conditions.
 
 Gatling can be used to load test your HTTP server. HTTP is not the only protocol that one can load test with Gatling. Gatling also has inbuilt support for Web Socket and JMS protocols. You can extend Gatling to support your protocol of choice.
 
 Load testing is often neglected by most software teams resulting in poor understanding of their application performance characteristics. These days most software teams take unit testing and functional testing seriously but still they ignore load testing. They write unit tests, integration tests, and functional tests and integrate them in their software build. I think part of the reason developer still don't write load tests has to do with the fact that most load testing tools are GUI based so you can't code your load tests. They allow you to export your load test as XML.
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+> **This blog is part of my year long blog series [TIL](https://github.com/snafis/TIL)**
 
 ## Why Gatling?
 
@@ -155,7 +155,7 @@ Gatling also generates a HTML report that you can use to drill down on details. 
 
 ```
 Reports generated in 0s.
-Please open the following file: /Users/shekhargulati/52-technologies-in-2016/10-gatling/blog/target/gatling/accesshomepagesimulation-1457270287042/index.html
+Please open the following file: /Users/snafis/TIL/10-gatling/blog/target/gatling/accesshomepagesimulation-1457270287042/index.html
 [info] Simulation AccessHomePageSimulation successful.
 [info] Simulation(s) execution ended.
 ```
@@ -171,7 +171,3 @@ You can also view response time percentile over time and number of requests per 
 ## Conclusion
 
 Gatling is a very valuable tool that can help you discover application bottlenecks. You can use the feedback to improve your application performance. There are many other features of Gatling that I have not covered in this blog like dynamic data using Feeders, using loops to perform repetitive tasks, and checking failures. You can refer to [Gatling documentation](http://gatling.io/docs/2.1.7/advanced_tutorial.html#advanced-tutorial) to learn more.
-
-That's all for this week. Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/13](https://github.com/shekhargulati/52-technologies-in-2016/issues/13).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/10-gatling)](https://github.com/igrigorik/ga-beacon)

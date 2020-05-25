@@ -1,7 +1,7 @@
 Making Sense of Regular Expressions
 -----
 
-Welcome to the twenty second blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I wanted to write about speech recognition but end up learning regular expressions. Regular Expressions or Regex allows you to define patterns to match text. For example, you can write a regular expression `[Ss]hekh?ar` which will match `Shekhar, shekhar, Shekar, or shekar`. I am programming for last eleven years but I was never comfortable with regular expressions. Whenever I see a relatively complicated regular expression, I don't understand how to break it into smaller pieces to make sense of it. So, I decided to learn about regular expressions. In this tutorial, I will walk you through a series of examples that will help you learn about regular expressions. I will end this tutorial by covering a library [VerbalExpressions](https://github.com/VerbalExpressions) that you can use to programmatically build regular expressions. VerbalExpressions is implemented in most of the commonly used programming languages so you can use it with your favorite programming language.
+Welcome to the twenty second blog of [TIL](https://github.com/snafis/TIL) blog series. This week I wanted to write about speech recognition but end up learning regular expressions. Regular Expressions or Regex allows you to define patterns to match text. For example, you can write a regular expression `[Ss]hekh?ar` which will match `Shekhar, shekhar, Shekar, or shekar`. I am programming for last eleven years but I was never comfortable with regular expressions. Whenever I see a relatively complicated regular expression, I don't understand how to break it into smaller pieces to make sense of it. So, I decided to learn about regular expressions. In this tutorial, I will walk you through a series of examples that will help you learn about regular expressions. I will end this tutorial by covering a library [VerbalExpressions](https://github.com/VerbalExpressions) that you can use to programmatically build regular expressions. VerbalExpressions is implemented in most of the commonly used programming languages so you can use it with your favorite programming language.
 
 
 ## Why [Ww]e|[Ii] don't get regular expressions?
@@ -233,7 +233,3 @@ public class GaddafiSpellingMatcher {
 You can look at all the code [here](./code).
 
 ----
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/28](https://github.com/shekhargulati/52-technologies-in-2016/issues/28).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/22-regex)](https://github.com/igrigorik/ga-beacon)

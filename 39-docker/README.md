@@ -1,11 +1,11 @@
 Docker for Java Developers Part 1
 --------
 
-Welcome to thirty-ninth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) series. This week I had to give a talk on Docker ecosystem so I spent a lot of my after office hours preparing for the talk. [Docker](http://docker.com/) is a container technology that allows us to package an application and its dependencies together in a filesystem so that they can be deployed together on any server. This helps us achieve package once deploy anywhere. So, in the next few posts of this series, we will learn how Java developers can get started with Docker.
+Welcome to thirty-ninth post of [TIL](https://github.com/snafis/TIL) series. This week I had to give a talk on Docker ecosystem so I spent a lot of my after office hours preparing for the talk. [Docker](http://docker.com/) is a container technology that allows us to package an application and its dependencies together in a filesystem so that they can be deployed together on any server. This helps us achieve package once deploy anywhere. So, in the next few posts of this series, we will learn how Java developers can get started with Docker.
 
 I first learnt about Docker in 2013 when OpenShift decided to rewrite itself using Docker and Kubernetes. At that time, I wrote [Docker: The Missing Tutorial](https://blog.openshift.com/day-21-docker-the-missing-tutorial/) post to share my understanding of Docker with the community. Since then, I have followed Docker ecosystem and used it in few of my projects. Docker has matured from a cool project to a container platform with a very rich toolset.
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+> **This blog is part of my year long blog series [TIL](https://github.com/snafis/TIL)**
 
 ## Docker Introduction
 
@@ -181,7 +181,7 @@ openjdk:8 container has git installed so we will use git to clone the `taskman` 
 
 ```
 root@ddfd44abc1a9:/# mkdir ~/code && cd ~/code
-root@ddfd44abc1a9:~/code# git clone https://github.com/shekhargulati/taskman.git
+root@ddfd44abc1a9:~/code# git clone https://github.com/snafis/taskman.git
 root@ddfd44abc1a9:~/code# cd taskman/
 ```
 
@@ -260,14 +260,14 @@ Performing commands with in the container is good for testing but to make the pr
 Navigate to a convinient location on your filesystem and clone the repository.
 
 ```
-$ git clone git@github.com:shekhargulati/taskman.git
+$ git clone git@github.com:snafis/taskman.git
 ```
 
 Let's create a new file Dockerfile in the project root and populate it with following contents.
 
 ```
 FROM openjdk:8
-MAINTAINER "Shekhar Gulati"
+MAINTAINER "Shifath Nafis"
 ENV APP_DIR /app
 ADD . $APP_DIR/
 WORKDIR $APP_DIR
@@ -369,7 +369,7 @@ buildscript {
         classpath('se.transmode.gradle:gradle-docker:1.2')
     }
 }
-group 'com.shekhargulati'
+group 'com.snafis'
 version '1.0.0'
 
 apply plugin: 'java'
@@ -417,7 +417,7 @@ Also, we will move Dockerfile from the application root to a new folder `docker`
 
 ```
 FROM openjdk:8
-MAINTAINER "Shekhar Gulati"
+MAINTAINER "Shifath Nafis"
 ENV APP_DIR /app
 ADD taskman.jar $APP_DIR/
 WORKDIR $APP_DIR
@@ -430,13 +430,13 @@ To build the image we will use Gradle command `./gradlew clean buildDocker`. The
 ```
 $ docker images
 REPOSITORY                  TAG                 IMAGE ID            CREATED             SIZE
-com.shekhargulati/taskman   1.0.0               7f5a94fa6cbc        4 seconds ago       670.2 MB
+com.snafis/taskman   1.0.0               7f5a94fa6cbc        4 seconds ago       670.2 MB
 ```
 
 You can launch container from this image by executing following command.
 
 ```
-$ docker run -p 8080:8080 com.shekhargulati/taskman:1.0.0
+$ docker run -p 8080:8080 com.snafis/taskman:1.0.0
 ```
 
 This time you will notice that application launched quickly as we didn't had to build the project. Once container boots up, you will be able to access application at [http://localhost:9080](http://localhost:9080). You can view all tasks at [http://localhost:9080/api/tasks](http://localhost:9080/api/tasks). If you are using Docker machine then you replace localhost with value of `docker-machine ip <machine_name>` command.
@@ -446,7 +446,7 @@ This time you will notice that application launched quickly as we didn't had to 
 So far we have been using HSQL in an in-memory mode. So, application looses data on each restart. We could make our application use file backed db by specifying `spring.datasource.url` property. But, rather than changing the value in the `application.properties` we can pass it with the application launch command as shown below.
 
 ```
-$ docker run -it -d -p 9080:8080 com.shekhargulati/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
+$ docker run -it -d -p 9080:8080 com.snafis/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
 ```
 
 You can connect to the container and see the data directory.
@@ -460,7 +460,7 @@ taskman-db.lck	taskman-db.log	taskman-db.properties  taskman-db.script  taskman-
 It is not a good idea to write to container file system. You can start a container with filesystem in readonly mode.
 
 ```
-$ docker run -it --read-only -p 9080:8080 com.shekhargulati/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
+$ docker run -it --read-only -p 9080:8080 com.snafis/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
 ```
 
 Application will fail to start. The reason is embedded tomcat needs a writable `/tmp` directory.
@@ -474,7 +474,7 @@ org.springframework.context.ApplicationContextException: Unable to start embedde
 This is done using volume option as shown below.
 
 ```
-$ docker run -it --read-only -p 9080:8080 -v /tmp com.shekhargulati/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
+$ docker run -it --read-only -p 9080:8080 -v /tmp com.snafis/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
 ```
 
 This time also it will fail to start because HSQL fails to write.
@@ -486,7 +486,7 @@ Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile
 Now, we will use volume to provide HSQL a directory on host system where it can write data.
 
 ```
-$ docker run -it -d --read-only -p 9080:8080 -v /tmp -v ~/docker/data:/data com.shekhargulati/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
+$ docker run -it -d --read-only -p 9080:8080 -v /tmp -v ~/docker/data:/data com.snafis/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
 ```
 
 > **It is also a good idea to add a bash function that remove dangling images and volumes and  stopped containers as shown below. Thanks [Xinjiang Shao](https://github.com/soleo) for suggesting this tip.**
@@ -501,9 +501,4 @@ $ docker run -it -d --read-only -p 9080:8080 -v /tmp -v ~/docker/data:/data com.
 
 ----
 
-That's all for this week. In the next post, we will learn how to use MySQL database with our application. We will cover Docker networking basics that makes multi container applications tick.
-
-
-Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/60](https://github.com/shekhargulati/52-technologies-in-2016/issues/60).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/39-docker-part1)](https://github.com/igrigorik/ga-beacon)
+ In the next post, we will learn how to use MySQL database with our application. We will cover Docker networking basics that makes multi container applications tick.

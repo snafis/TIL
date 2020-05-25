@@ -1,7 +1,7 @@
 Building "Bootiful" Scala Web Applications with Spring Boot
 ---
 
-Welcome to the thirty-seventh post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I started work on a project where I decided to use [Spring Boot](http://projects.spring.io/spring-boot/). Scala is my preferred programming language so I decided to use Scala and Spring Boot together. The reason I decided to use Spring Boot Scala combo is because web frameworks in Scala community are over-complicated and over-engineered. They just don't feel natural and lacks good documentation. More often than not they make you unproductive as you spend time fighting with the framework rather than working on your business problem. On the other hand, I find [Spring Boot](http://projects.spring.io/spring-boot/) productive and matching my taste. Spring Boot documentation and community support helps you in case you are struck. Spring Boot lives up to its vision as mentioned on its [website](http://projects.spring.io/spring-boot/).
+Welcome to the thirty-seventh post of [TIL](https://github.com/snafis/TIL) blog series. This week I started work on a project where I decided to use [Spring Boot](http://projects.spring.io/spring-boot/). Scala is my preferred programming language so I decided to use Scala and Spring Boot together. The reason I decided to use Spring Boot Scala combo is because web frameworks in Scala community are over-complicated and over-engineered. They just don't feel natural and lacks good documentation. More often than not they make you unproductive as you spend time fighting with the framework rather than working on your business problem. On the other hand, I find [Spring Boot](http://projects.spring.io/spring-boot/) productive and matching my taste. Spring Boot documentation and community support helps you in case you are struck. Spring Boot lives up to its vision as mentioned on its [website](http://projects.spring.io/spring-boot/).
 
 > **Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention over configuration and is designed to get you up and running as quickly as possible.**
 
@@ -244,9 +244,3 @@ Date: Sun, 11 Sep 2016 20:53:26 GMT
 ```
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/55](https://github.com/shekhargulati/52-technologies-in-2016/issues/55).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/37-spring-boot-scala)](https://github.com/igrigorik/ga-beacon)

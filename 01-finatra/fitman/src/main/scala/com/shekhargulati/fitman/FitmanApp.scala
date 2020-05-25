@@ -1,6 +1,6 @@
-package com.shekhargulati.fitman
+package com.snafis.fitman
 
-import com.shekhargulati.fitman.api.WeightResource
+import com.snafis.fitman.api.WeightResource
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.filters.CommonFilters
 import com.twitter.finatra.http.routing.HttpRouter

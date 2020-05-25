@@ -1,7 +1,7 @@
 Automate Your Static Website Social Notifications with AWS Lambda
 -----
 
-Welcome to thirty-fourth week of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I learnt about AWS Lambda. [AWS Lambda](https://aws.amazon.com/lambda/) is the third compute service from Amazon. It is very different from the existing two compute services EC2(Elastic Compute Cloud) and ECS(Elastic Container Service). AWS Lambda is an event-driven, serverless computing platform that executes your code in response to events. It manages the underlying infrastructure scaling it up or down to meet the event rate. You are only charged for the time your code is executed. AWS Lambda currently supports Java, Python, and Node.js language runtimes. In this blog, we will use Python as our choice of language.
+Welcome to thirty-fourth week of [TIL](https://github.com/snafis/TIL) blog series. This week I learnt about AWS Lambda. [AWS Lambda](https://aws.amazon.com/lambda/) is the third compute service from Amazon. It is very different from the existing two compute services EC2(Elastic Compute Cloud) and ECS(Elastic Container Service). AWS Lambda is an event-driven, serverless computing platform that executes your code in response to events. It manages the underlying infrastructure scaling it up or down to meet the event rate. You are only charged for the time your code is executed. AWS Lambda currently supports Java, Python, and Node.js language runtimes. In this blog, we will use Python as our choice of language.
 
 ## AWS Lambda use case
 
@@ -263,8 +263,3 @@ Go to your Github repository and add a new file, commit it with message "new blo
 
 
 -----
-
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/47](https://github.com/shekhargulati/52-technologies-in-2016/issues/47).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/34-aws-lambda)](https://github.com/igrigorik/ga-beacon)

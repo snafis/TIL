@@ -1,8 +1,8 @@
-package com.shekhargulati.sentiment_analyzer
+package com.snafis.sentiment_analyzer
 
 import java.util.Properties
 
-import com.shekhargulati.sentiment_analyzer.Sentiment.Sentiment
+import com.snafis.sentiment_analyzer.Sentiment.Sentiment
 import edu.stanford.nlp.ling.CoreAnnotations
 import edu.stanford.nlp.neural.rnn.RNNCoreAnnotations
 import edu.stanford.nlp.pipeline.{Annotation, StanfordCoreNLP}

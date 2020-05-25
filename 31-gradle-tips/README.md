@@ -1,13 +1,13 @@
 50 Gradle Tips
 ----
 
-Welcome to thirty-first week of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) series. This week I decided to write down Gradle tips that I have learnt in last year or so. Over last year or so I have started using Gradle as my primary build tool for JVM based projects. Before using Gradle I was an Apache Maven user. Gradle takes best from both Apache Maven and Apache Ant providing you best of both worlds. Gradle borrows flexibility from Ant and convention over configuration, dependency management and plugins from Maven. Gradle treats task as first class citizen just like Ant.
+Welcome to thirty-first week of [TIL](https://github.com/snafis/TIL) series. This week I decided to write down Gradle tips that I have learnt in last year or so. Over last year or so I have started using Gradle as my primary build tool for JVM based projects. Before using Gradle I was an Apache Maven user. Gradle takes best from both Apache Maven and Apache Ant providing you best of both worlds. Gradle borrows flexibility from Ant and convention over configuration, dependency management and plugins from Maven. Gradle treats task as first class citizen just like Ant.
 
 A Gradle build has three distinct phases - initialization, configuration, and execution. The initialization phase determine which all projects will take part in the build process and create a Project instance for each of the project. During configuration phase, it execute build scripts of all the project that are taking part in build process. Finally, during the execution phase all the tasks configured during the configuration phase are executed.
 
 In this document, I will list down tips that I have learnt over last year or so.
 
-> **The actual gradle tips is maintained at [github:shekhargulati/gradle-tips](https://github.com/shekhargulati/gradle-tips). If you wish to add any Gradle tip please send send pull request to [github:shekhargulati/gradle-tips](https://github.com/shekhargulati/gradle-tips) project.**
+> **The actual gradle tips is maintained at [github:snafis/gradle-tips](https://github.com/snafis/gradle-tips). If you wish to add any Gradle tip please send send pull request to [github:snafis/gradle-tips](https://github.com/snafis/gradle-tips) project.**
 
 ## Tip 1: Use Gradle Wrapper
 
@@ -686,9 +686,3 @@ $ gradle bootRun --debug-jvm
 ```
 
 -----------
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/44](https://github.com/shekhargulati/52-technologies-in-2016/issues/44).
-
-You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/31-gradle-tips)](https://github.com/igrigorik/ga-beacon)

@@ -1,7 +1,7 @@
 GraphQL - building a pokedex in React with GraphQL
 -----
 
-Welcome to the forty-third post of the [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) series. This week, we will explore [GraphQL](http://graphql.org), a query language that is starting to get more and more attention. Facebook, who internally used GraphQL since 2012 and released a first specification and reference implementation of GraphQL in 2015 announced GraphQL to be [production ready] in September 2016. What followed is a trend of more and more companies starting to use GraphQL, such as [GitHub](https://youtu.be/hT-4pVmkGt0), [Coursera](https://youtu.be/JC-UJwBKc2Y) and [Shopify](https://youtu.be/Wlu_PWCjc6Y).
+Welcome to the forty-third post of the [TIL](https://github.com/snafis/TIL) series. This week, we will explore [GraphQL](http://graphql.org), a query language that is starting to get more and more attention. Facebook, who internally used GraphQL since 2012 and released a first specification and reference implementation of GraphQL in 2015 announced GraphQL to be [production ready] in September 2016. What followed is a trend of more and more companies starting to use GraphQL, such as [GitHub](https://youtu.be/hT-4pVmkGt0), [Coursera](https://youtu.be/JC-UJwBKc2Y) and [Shopify](https://youtu.be/Wlu_PWCjc6Y).
 
 In this post we will explore GraphQL by building a pokedex application with GraphQL. You can find an interactive, read-only demo of the pokedex [here](http://demo.learnapollo.com).
 

@@ -1,7 +1,7 @@
 Trello Clone with Angular Dragula
 ----
 
-Welcome to twenty-fifth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I wanted to learn how to build a Trello like website. [Trello](https://trello.com/) is a web-based project management application that uses kanban philosophy to manage projects. In Trello, you have three main entities -- board, list, and card. A board is a collection of lists and list is a collection of cards. You can drag and drop cards on different lists. Below is a screenshot of a simple Trello board with three lists each having one card for your understanding.
+Welcome to twenty-fifth blog of [TIL](https://github.com/snafis/TIL) blog series. This week I wanted to learn how to build a Trello like website. [Trello](https://trello.com/) is a web-based project management application that uses kanban philosophy to manage projects. In Trello, you have three main entities -- board, list, and card. A board is a collection of lists and list is a collection of cards. You can drag and drop cards on different lists. Below is a screenshot of a simple Trello board with three lists each having one card for your understanding.
 
 ![](images/trello-board.png)
 
@@ -297,6 +297,6 @@ export class MainController {
 
 ----
 
-That's all for this week. Please provide your feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/31](https://github.com/shekhargulati/52-technologies-in-2016/issues/31).
+ Please provide your feedback by adding a comment to 31]/31).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/25-angular-dragula)](https://github.com/igrigorik/ga-beacon)
+(/25-angular-dragula)]

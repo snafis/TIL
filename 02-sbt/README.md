@@ -1,9 +1,7 @@
-SBT: The Missing Tutorial [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/shekhargulati/52-technologies-in-2016/blob/master/02-sbt/README.md)](http://ttr.myapis.xyz/)
+SBT: The Missing Tutorial [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/snafis/TIL/blob/master/02-sbt/README.md)](http://ttr.myapis.xyz/)
 ---
 
-Welcome to the second blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. From last year, I have started using Scala as my main programming language. One of the tools that you have to get used to while working with a programming language is a build tool. In my office projects, we use Gradle for all our projects be it Scala or Java. In most of my personal Scala projects, I have started using `sbt` as my preferred build tool. **`sbt` is a general purpose build tool written in Scala**. Most of the time we try to hack our way while using a build tool never learning it properly. As Scala will be the language that I will cover most in this series, I decided to thoroughly learn `sbt` this week. We (developers) often underestimate the importance of learning a build tool thoroughly and end up not using build tool in the most effective way. Good working knowledge of a build tool can make us more productive so we should take it seriously.
-
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+Welcome to the second blog of the series. From last year, I have started using Scala as my main programming language. One of the tools that you have to get used to while working with a programming language is a build tool. In my office projects, we use Gradle for all our projects be it Scala or Java. In most of my personal Scala projects, I have started using `sbt` as my preferred build tool. **`sbt` is a general purpose build tool written in Scala**. Most of the time we try to hack our way while using a build tool never learning it properly. As Scala will be the language that I will cover most in this series, I decided to thoroughly learn `sbt` this week. We (developers) often underestimate the importance of learning a build tool thoroughly and end up not using build tool in the most effective way. Good working knowledge of a build tool can make us more productive so we should take it seriously.
 
 ## Table of Contents
 
@@ -60,9 +58,9 @@ To view the basic information about `sbt`, we can use `about` task. The `sbt abo
 ```
 $ sbt about
 
-[info] Set current project to code (in build file:/Users/shekhargulati/blogs/sbt-playground)
+[info] Set current project to code (in build file:/Users/snafis/blogs/sbt-playground)
 [info] This is sbt 0.13.9
-[info] The current project is {file:/Users/shekhargulati/blogs/sbt-playground}code 0.1-SNAPSHOT
+[info] The current project is {file:/Users/snafis/blogs/sbt-playground}code 0.1-SNAPSHOT
 [info] The current project is built against Scala 2.10.5
 [info] Available Plugins: sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.CorePlugin, sbt.plugins.JUnitXmlReportPlugin
 [info] sbt, sbt plugins, and build definitions are using Scala 2.10.5
@@ -85,7 +83,7 @@ $ sbt tasks
 The above task will produce the following output:
 
 ```
-[info] Set current project to code (in build file:/Users/shekhargulati/blogs/tasky/)
+[info] Set current project to code (in build file:/Users/snafis/blogs/tasky/)
 
 This is a list of tasks defined for the current project.
 It does not list the scopes the tasks are defined in; use the 'inspect' task for that.
@@ -143,7 +141,7 @@ Now, run the `sbt` command:
 
 ```
 $ sbt
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky)
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky)
 >
 ```
 
@@ -202,7 +200,7 @@ Now you can run the code from inside the `sbt` shell by first compiling the code
 
 ```
 > compile
-[info] Compiling 1 Scala source to /Users/shekhargulati/blogs/tasky/target/scala-2.10/classes...
+[info] Compiling 1 Scala source to /Users/snafis/blogs/tasky/target/scala-2.10/classes...
 [success] Total time: 2 s, completed 10 Jan, 2016 8:51:55 AM
 ```
 
@@ -227,17 +225,17 @@ scalaVersion := "2.11.6"
 
 ```
 > reload
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky/)
 ```
 
 Now if you compile the project using `compile` task you will see that project is compiled using scala `2.11.6` version:
 
 ```
 > compile
-[info] Updating {file:/Users/shekhargulati/blogs/tasky/}tasky...
+[info] Updating {file:/Users/snafis/blogs/tasky/}tasky...
 [info] Resolving jline#jline;2.12.1 ...
 [info] Done updating.
-[info] Compiling 1 Scala sources to /Users/shekhargulati/dev/blogs/tasky/target/scala-2.11/classes...
+[info] Compiling 1 Scala sources to /Users/snafis/dev/blogs/tasky/target/scala-2.11/classes...
 [info] 'compiler-interface' not yet compiled for Scala 2.11.6. Compiling...
 [info]   Compilation completed in 7.316 s
 [success] Total time: 8 s, completed 10 Jan, 2016 1:30:06 PM
@@ -256,16 +254,16 @@ import java.time.LocalDate
 case class Task(title: String, dueOn: LocalDate, tags: Seq[String] = Seq(), finished: Boolean = false)
 ```
 
-> Please note we are using Java 8 Date-Time API. If you want to learn Java 8, then you can refer to my Java 8 tutorial  [https://github.com/shekhargulati/java8-the-missing-tutorial](https://github.com/shekhargulati/java8-the-missing-tutorial)
+> Please note we are using Java 8 Date-Time API. If you want to learn Java 8, then you can refer to my Java 8 tutorial  [https://github.com/snafis/java8-the-missing-tutorial](https://github.com/snafis/java8-the-missing-tutorial)
 
 If you are inside the `sbt` shell, then you can compile the code using `compile` task. To experiment with your data model, you can use `sbt` in an interactive mode by executing the `console` task from within the `sbt` shell:
 
 ```
 > console
-[info] Updating {file:/Users/shekhargulati/blogs/tasky/}tasky...
+[info] Updating {file:/Users/snafis/blogs/tasky/}tasky...
 [info] Resolving jline#jline;2.12.1 ...
 [info] Done updating.
-[info] Compiling 3 Scala sources to /Users/shekhargulati/blogs/tasky/target/scala-2.11/classes...
+[info] Compiling 3 Scala sources to /Users/snafis/blogs/tasky/target/scala-2.11/classes...
 [info] Starting scala interpreter...
 [info]
 Welcome to Scala version 2.11.6 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_60).
@@ -340,7 +338,7 @@ libraryDependencies += groupID % artifactID % version % configuration
 
 ```
 > reload
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky/)
 ```
 
 > `reload` will not download the dependencies that you add in the `build.sbt` file. It will only refresh the project model so when you run task next time it will download all the required dependencies.
@@ -368,13 +366,13 @@ To run the test you can execute the test task:
 
 ```
 > test
-[info] Updating {file:/Users/shekhargulati/blogs/tasky/}tasky...
+[info] Updating {file:/Users/snafis/blogs/tasky/}tasky...
 [info] Resolving jline#jline;2.12.1 ...
 [info] downloading https://jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.6/scalatest_2.11-2.2.6.jar ...
 [info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.11;2.2.6!scalatest_2.11.jar(bundle) (42568ms)
 [info] Done updating.
-[info] Compiling 1 Scala source to /Users/shekhargulati/blogs/tasky/target/scala-2.11/classes...
-[info] Compiling 1 Scala source to  /Users/shekhargulati/blogs/tasky/target/scala-2.11/test-classes...
+[info] Compiling 1 Scala source to /Users/snafis/blogs/tasky/target/scala-2.11/classes...
+[info] Compiling 1 Scala source to  /Users/snafis/blogs/tasky/target/scala-2.11/test-classes...
 [info] TaskManagerSpec:
 [info] An empty tasks list
 [info] - should have 0 tasks due today
@@ -437,7 +435,7 @@ As soon as you save the file, `sbt` will detect file content change and rerun al
 
 ```
 1. Waiting for source changes... (press enter to interrupt)
-[info] Compiling 1 Scala source to /Users/shekhargulati/blogs/tasky/target/scala-2.11/test-classes...
+[info] Compiling 1 Scala source to /Users/snafis/blogs/tasky/target/scala-2.11/test-classes...
 [info] TaskManagerSpec:
 [info] An empty tasks list
 [info] - should have 0 tasks due today
@@ -472,7 +470,7 @@ Now, tests will pass and you will see the following output in the sbt console:
 
 ```
 2. Waiting for source changes... (press enter to interrupt)
-[info] Compiling 1 Scala source to /Users/shekhargulati/blogs/tasky/target/scala-2.11/classes...
+[info] Compiling 1 Scala source to /Users/snafis/blogs/tasky/target/scala-2.11/classes...
 [info] TaskManagerSpec:
 [info] An empty tasks list
 [info] - should have 0 tasks due today
@@ -517,7 +515,7 @@ You can run the `gitCommitCountTask` task as shown below. You can also execute t
 
 ```
 $ sbt gitCommitCountTask
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky/)
 total number of commits on [master]: 10
 [success] Total time: 0 s, completed 10 Jan, 2016 5:16:07 PM
 ```
@@ -542,7 +540,7 @@ Once you have defined the plugin, you can use the plugin by executing the task i
 
 ```
 → sbt scalastyle
-[info] Loading project definition from /Users/shekhargulati/blogs/tasky/project
+[info] Loading project definition from /Users/snafis/blogs/tasky/project
 [info] Resolving org.fusesource.jansi#jansi;1.4 ...
 [info] downloading https://repo1.maven.org/maven2/org/scalastyle/scalastyle-sbt-plugin_2.10_0.13/0.8.0/scalastyle-sbt-plugin-0.8.0.jar ...
 [info] 	[SUCCESSFUL ] org.scalastyle#scalastyle-sbt-plugin;0.8.0!scalastyle-sbt-plugin.jar (3199ms)
@@ -553,8 +551,8 @@ Once you have defined the plugin, you can use the plugin by executing the task i
 [info] downloading https://jcenter.bintray.com/com/typesafe/config/1.2.0/config-1.2.0.jar ...
 [info] 	[SUCCESSFUL ] com.typesafe#config;1.2.0!config.jar(bundle) (9354ms)
 [info] Done updating.
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
-[info] scalastyle using config /Users/shekhargulati/blogs/tasky/scalastyle-config.xml
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky/)
+[info] scalastyle using config /Users/snafis/blogs/tasky/scalastyle-config.xml
 java.lang.RuntimeException: config does not exist: scalastyle-config.xml
 	at scala.sys.package$.error(package.scala:27)
 [error] (compile:scalastyle) config does not exist: scalastyle-config.xml
@@ -565,9 +563,9 @@ The task will fail because plugin could not find `scalastyle-config.xml`. You ca
 
 ```
 → sbt scalastyleGenerateConfig
-[info] Loading project definition from /Users/shekhargulati/blogs/tasky/project
-[info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
-[success] created: /Users/shekhargulati/blogs/tasky/scalastyle-config.xml
+[info] Loading project definition from /Users/snafis/blogs/tasky/project
+[info] Set current project to tasky (in build file:/Users/snafis/blogs/tasky/)
+[success] created: /Users/snafis/blogs/tasky/scalastyle-config.xml
 [success] Total time: 0 s, completed 10 Jan, 2016 6:04:04 PM
 ```
 
@@ -621,7 +619,7 @@ To view compile classpath dependencies you can run the following task from insid
 ```scala
 > show compile:dependencyClasspath
 
-[info] List(Attributed(/Users/shekhargulati/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar), Attributed(/Users/shekhargulati/.ivy2/cache/com.typesafe.slick/slick_2.11/bundles/slick_2.11-3.1.1.jar), Attributed(/Users/shekhargulati/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.10.jar), Attributed(/Users/shekhargulati/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar), Attributed(/Users/shekhargulati/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar), Attributed(/Users/shekhargulati/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar), Attributed(/Users/shekhargulati/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar))
+[info] List(Attributed(/Users/snafis/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar), Attributed(/Users/snafis/.ivy2/cache/com.typesafe.slick/slick_2.11/bundles/slick_2.11-3.1.1.jar), Attributed(/Users/snafis/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.10.jar), Attributed(/Users/snafis/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar), Attributed(/Users/snafis/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar), Attributed(/Users/snafis/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar), Attributed(/Users/snafis/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar))
 ```
 
 Similarly, if you have to view test classpath then you can run `show test:dependencyClasspath` task.
@@ -642,7 +640,7 @@ Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You c
 
 ```
 > dependencyTree
-[info] Updating {file:/Users/shekhargulati/blogs/fitman/}fitman...
+[info] Updating {file:/Users/snafis/blogs/fitman/}fitman...
 [info] Resolving jline#jline;2.12.1 ...
 [info] Done updating.
 [info] default:fitman_2.11:0.1.0 [S]
@@ -658,7 +656,3 @@ Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You c
 [info]
 [success] Total time: 0 s, completed 17 Jan, 2016 3:00:51 PM
 ```
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/2](https://github.com/shekhargulati/52-technologies-in-2016/issues/2).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/02-sbt)](https://github.com/igrigorik/ga-beacon)

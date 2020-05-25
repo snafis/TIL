@@ -11,15 +11,11 @@ Week 1: Finatra Tutorial -- Build Beautiful REST API The Twitter Way
 
 In this step-by-step tutorial, we will cover how to build a Scala REST API using Finatra version 2. Finatra version 2 is a complete rewrite of finatra and is significantly faster(50 times according to documentation) than version 1.x.
 
-> This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)
-
 ## Prerequisite
 
 1. Scala 2.11.7
 2. IntelliJ Idea Community Edition
 3. JDK 8
-
-> Code for today's demo application is on Github at [fitman](fitman)
 
 ## Building an application from scratch
 
@@ -172,7 +168,7 @@ class FitmanServer extends HttpServer {
 
 One of the feature of Finatra that impressed me most was its inbuilt support for feature testing. Feature testing is a form of blackbox testing that tests a particular feature from outside.
 
-Let's add dependencies to `build.sbt` file. You can view full build.sbt [here](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/01-finatra/fitman/build.sbt).
+Let's add dependencies to `build.sbt` file. You can view full build.sbt [here](https://github.com/snafis/TIL/blob/master/01-finatra/fitman/build.sbt).
 
 ```scala
 libraryDependencies += "com.twitter.finatra" % "finatra-http_2.11" % versions.finatra % "test"
@@ -230,7 +226,7 @@ This allows you to test the externally visible features of the API.
 Let's first write the feature test for our WeightResource. The feature test will test that when an HTTP POST request is made to `/weights` endpoint then weight will be stored in some database. In today's blog, we will use a mutable Map to act as a database. Later in this series, we will cover how to work with databases in Scala. We will update our blog then.
 
 ```scala
-import com.shekhargulati.fitman.FitmanServer
+import com.snafis.fitman.FitmanServer
 import com.twitter.finagle.http.Status
 import com.twitter.finatra.http.test.EmbeddedHttpServer
 import com.twitter.inject.server.FeatureTest
@@ -490,7 +486,3 @@ case class Weight(
                    postedAt: Instant = Instant.now()
                  )
 ```
-
-That's it for this week. Please give your feedback [https://github.com/shekhargulati/52-technologies-in-2016/issues/1](https://github.com/shekhargulati/52-technologies-in-2016/issues/1)
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/01-finatra)](https://github.com/igrigorik/ga-beacon)

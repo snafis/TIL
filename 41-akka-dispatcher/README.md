@@ -1,8 +1,8 @@
 
-Understanding Akka Dispatchers [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/shekhargulati/52-technologies-in-2016/blob/master/41-akka-dispatcher/README.md)](http://ttr.myapis.xyz/)
+Understanding Akka Dispatchers [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/snafis/TIL/blob/master/41-akka-dispatcher/README.md)](http://ttr.myapis.xyz/)
 ---
 
-Welcome to the forty-first post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I had to work on tuning a execution engine that is built using Akka. [Akka](http://akka.io/) is a toolkit and runtime for building highly concurrent, distributed and resilient message driven systems. This post assumes you already know Akka. Actor needs a dispatcher to perform its task. A dispatcher relies on executor to provide thread. There are two types of executors a dispatcher can have: 1) `fork-join-executor` 2) `thread-pool-executor`. In this post, we will understand how you can configure `fork-join-executor` and `thread-pool-executor` to meet your needs.
+Welcome to the forty-first post of [TIL](https://github.com/snafis/TIL) blog series. This week I had to work on tuning a execution engine that is built using Akka. [Akka](http://akka.io/) is a toolkit and runtime for building highly concurrent, distributed and resilient message driven systems. This post assumes you already know Akka. Actor needs a dispatcher to perform its task. A dispatcher relies on executor to provide thread. There are two types of executors a dispatcher can have: 1) `fork-join-executor` 2) `thread-pool-executor`. In this post, we will understand how you can configure `fork-join-executor` and `thread-pool-executor` to meet your needs.
 
 ## A Simple Akka Based Execution Engine
 
@@ -310,9 +310,3 @@ task-dispatcher {
 When you run the code now, you will see dynamic nature of `thread-pool-executor` in action. `thread-pool-executor` will create 24 threads as configured using `core-pool-size`. The first 24 tasks will be executed by these 24 threads. After the first 24 tasks, `thread-pool-executor` will wait till queue has 20 messages. Once queue is full, `thread-pool-executor` will use the `max-pool-size` configuration to create threads. This will go on until we reach 81 tasks. After that task-queue-size will go below 20 so remaining 19 tasks will be executed after threads are freed.
 
 ----
-
-That's all for this week.
-
-Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/67](https://github.com/shekhargulati/52-technologies-in-2016/issues/67).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/40-akka)](https://github.com/igrigorik/ga-beacon)

@@ -17,7 +17,7 @@ json_str = """
       "timestamp": "2016-08-22T18:54:29+05:30",
       "url": "https://github.com/shekhar-gulati/test31/commit/1c791fb44a03c32aaf3deeb93dd02c0cfee77780",
       "author": {
-        "name": "Shekhar Gulati",
+        "name": "Shifath Nafis",
         "email": "shekhar.gulati@gmail.com",
         "username": "shekhar-gulati"
       },
@@ -45,7 +45,7 @@ json_str = """
     "timestamp": "2016-08-22T18:54:29+05:30",
     "url": "https://github.com/shekhar-gulati/test31/commit/1c791fb44a03c32aaf3deeb93dd02c0cfee77780",
     "author": {
-      "name": "Shekhar Gulati",
+      "name": "Shifath Nafis",
       "email": "shekhar.gulati@gmail.com",
       "username": "shekhar-gulati"
     },

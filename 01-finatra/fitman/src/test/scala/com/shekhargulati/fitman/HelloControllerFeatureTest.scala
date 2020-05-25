@@ -1,4 +1,4 @@
-package com.shekhargulati.fitman
+package com.snafis.fitman
 
 import com.twitter.finagle.http.Status
 import com.twitter.finatra.http.test.EmbeddedHttpServer

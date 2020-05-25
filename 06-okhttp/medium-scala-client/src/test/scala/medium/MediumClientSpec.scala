@@ -24,9 +24,9 @@ class MediumClientSpec extends FunSpec with Matchers with BeforeAndAfterEach {
           |{
           |  "data": {
           |    "id": "123",
-          |    "username": "shekhargulati",
-          |    "name": "Shekhar Gulati",
-          |    "url": "https://medium.com/@shekhargulati",
+          |    "username": "snafis",
+          |    "name": "Shifath Nafis",
+          |    "url": "https://medium.com/@snafis",
           |    "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*pC-eYQUV-iP2Y10_LgGvwA.jpeg"
           |  }
           |}
@@ -44,9 +44,9 @@ class MediumClientSpec extends FunSpec with Matchers with BeforeAndAfterEach {
       val user = medium.getUser
       user should have(
         'id ("123"),
-        'username ("shekhargulati"),
-        'name ("Shekhar Gulati"),
-        'url ("https://medium.com/@shekhargulati"),
+        'username ("snafis"),
+        'name ("Shifath Nafis"),
+        'url ("https://medium.com/@snafis"),
         'imageUrl ("https://cdn-images-1.medium.com/fit/c/200/200/1*pC-eYQUV-iP2Y10_LgGvwA.jpeg")
       )
     }

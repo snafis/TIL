@@ -1,7 +1,7 @@
 Learn GoLang For Great Good Part 2: Unit Testing in Go
 ---
 
-Welcome to the twenty-ninth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week we will take our Go knowledge to the next level by learning how to perform unit testing in Go. Unit testing has become an essential skill set for every programmer. [Unit testing](https://en.wikipedia.org/wiki/Unit_testing) is a software testing in which we test individual units of source code. Go has inbuilt support for unit testing. It has a `testing` package that provides infrastructure to write unit tests. In this blog we will focus on writing test cases for a couple of programs we wrote in [part 1](../27-learn-golang-for-great-good/README.md).
+Welcome to the twenty-ninth post of [TIL](https://github.com/snafis/TIL) blog series. This week we will take our Go knowledge to the next level by learning how to perform unit testing in Go. Unit testing has become an essential skill set for every programmer. [Unit testing](https://en.wikipedia.org/wiki/Unit_testing) is a software testing in which we test individual units of source code. Go has inbuilt support for unit testing. It has a `testing` package that provides infrastructure to write unit tests. In this blog we will focus on writing test cases for a couple of programs we wrote in [part 1](../27-learn-golang-for-great-good/README.md).
 
 ## Prerequisite
 
@@ -10,7 +10,7 @@ Before you can start with this post make sure you have Go installed on your mach
 After following the instructions mentioned in the article you will have a Go workspace directory like `$HOME/dev/git/golang`. Inside the workspace directory, you will have `src`,`pkg`, and `bin` directories inside the `$HOME/dev/git/golang`. Inside the `src` directory, create a directory structure as shown below.
 
 ```bash
-$ mkdir -p src/github.com/shekhargulati
+$ mkdir -p src/github.com/snafis
 ```
 
 Note that `$` is used to signify command-line prompt. You don't have to type `$`.
@@ -27,7 +27,7 @@ GOEXE=""
 GOHOSTARCH="amd64"
 GOHOSTOS="darwin"
 GOOS="darwin"
-GOPATH="/Users/shekhargulati/dev/git/golang"
+GOPATH="/Users/snafis/dev/git/golang"
 GORACE=""
 GOROOT="/usr/local/go"
 GOTOOLDIR="/usr/local/go/pkg/tool/darwin_amd64"
@@ -38,7 +38,7 @@ CXX="clang++"
 CGO_ENABLED="1"
 ```
 
-Once you have done the above mentioned setup, you should create a new directory called `problems` inside the `src/github.com/shekhargulati` directory and change directory to it.
+Once you have done the above mentioned setup, you should create a new directory called `problems` inside the `src/github.com/snafis` directory and change directory to it.
 
 ```bash
 $ mkdir problems && cd problems
@@ -85,9 +85,9 @@ To run the test case, go has a test command. Run the command shown below to test
 $ go test
 ```
 ```
-# _/Users/shekhargulati/dev/git/golang/src/github.com/shekhargulati/problems
+# _/Users/snafis/dev/git/golang/src/github.com/snafis/problems
 ./equalornotequal_test.go:7: undefined: equalOrNotEqual
-FAIL	_/Users/shekhargulati/dev/git/golang/src/github.com/shekhargulati/problems [build failed]
+FAIL	_/Users/snafis/dev/git/golang/src/github.com/snafis/problems [build failed]
 ```
 
 As expected, test fails because `equalOrNotEqual` function is undefined as we have not written it yet.
@@ -115,7 +115,7 @@ $ go test
 ```
 ```
 PASS
-ok  	github.com/shekhargulati/problems	0.006s
+ok  	github.com/snafis/problems	0.006s
 ```
 
 By default, go will run all the test cases inside the current directory. If you want to run specific test cases then you can use `-run` option passing it a regex matching test case names. Let's write one more test case that test scenario when numbers are not equal.
@@ -153,7 +153,7 @@ package main
 
 import (
     "fmt"
-    "github.com/shekhargulati/problems"
+    "github.com/snafis/problems"
   )
 
 func main() {
@@ -183,7 +183,7 @@ package problems_test
 
 import (
   "testing"
-  . "github.com/shekhargulati/problems"
+  . "github.com/snafis/problems"
 )
 
 func TestThreeEqualNumbers(t *testing.T) {
@@ -198,7 +198,7 @@ There are couple of important changes to note.
 
 1. We have used a different package name `problems_test` instead or `problems`. This means we will have access to only exported functions.
 
-2. In the import statement, we have to import our package `github.com/shekhargulati/problems`. Also, we used `dot-import` so that exported functions are in the `problems_test` package scope.
+2. In the import statement, we have to import our package `github.com/snafis/problems`. Also, we used `dot-import` so that exported functions are in the `problems_test` package scope.
 
 ## Improving test output readability
 
@@ -229,7 +229,7 @@ $ go test -v -run TestThreeEqualNumbers
 	equalornotequalblack_test.go:10: 	When we make a call to EqualOrNotEqual(1,1,1)
 	equalornotequalblack_test.go:13: 	Then we should get true
 PASS
-ok  	github.com/shekhargulati/problems	0.007s
+ok  	github.com/snafis/problems	0.007s
 ```
 
 ## Running test multiple times
@@ -256,7 +256,7 @@ $ go test -v -run TestThreeEqualNumbers -count 3
 	equalornotequalblack_test.go:10: 	When we make a call to EqualOrNotEqual(1,1,1)
 	equalornotequalblack_test.go:13: 	Then we should get true
 PASS
-ok  	github.com/shekhargulati/problems	0.006s
+ok  	github.com/snafis/problems	0.006s
 ```
 
 ## Other options
@@ -331,7 +331,7 @@ To write table tests, we will create a table `closestPairTests`. It is an array 
 package problems_test
 
 import (
-	. "github.com/shekhargulati/problems"
+	. "github.com/snafis/problems"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -369,11 +369,11 @@ $ go test -v -run TestClosestPair
 	closestpair_test.go:20: Running test for input [2 4 5]
 	closestpair_test.go:20: Running test for input [100 5 7 99 11]
 PASS
-ok  	github.com/shekhargulati/problems	0.009s
+ok  	github.com/snafis/problems	0.009s
 ```
 
 ------
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/42](https://github.com/shekhargulati/52-technologies-in-2016/issues/42).
+ 42]/42).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/29-golang-part2)](https://github.com/igrigorik/ga-beacon)
+(/29-golang-part2)]

@@ -1,7 +1,7 @@
 Groovy AST Transformations By Example
 -----
 
-Welcome to the thirty-second post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I learnt about Groovy AST transformations. AST transformations allows you to hook into the Groovy compilation process so that you can customize it to meet your needs. This is done at compilation time so you don't pay any cost at runtime. AST transformation is compile-time meta programming. If you have used Groovy you would know that you don't have to write commonly used methods like setters, getters, equals, hashcode, toString, etc. because Groovy can generate them for you. You just apply annotations to your class and voila Groovy add those methods for you. This helps you get rid of the boilerplate code and makes your code clean and readable. AST transformations are very easy to write. You don't have to be a compiler or AST ninja to write an AST transformation. In this blog, you will learn how to write an AST transformation that will add a `toHash` method to a class. `toHash` method will generate a hash for your object. You will be able to provide hash algorithm of your choice. We will use Java's `java.security.MessageDigest` to generate the hash code.
+Welcome to the thirty-second post of [TIL](https://github.com/snafis/TIL) blog series. This week I learnt about Groovy AST transformations. AST transformations allows you to hook into the Groovy compilation process so that you can customize it to meet your needs. This is done at compilation time so you don't pay any cost at runtime. AST transformation is compile-time meta programming. If you have used Groovy you would know that you don't have to write commonly used methods like setters, getters, equals, hashcode, toString, etc. because Groovy can generate them for you. You just apply annotations to your class and voila Groovy add those methods for you. This helps you get rid of the boilerplate code and makes your code clean and readable. AST transformations are very easy to write. You don't have to be a compiler or AST ninja to write an AST transformation. In this blog, you will learn how to write an AST transformation that will add a `toHash` method to a class. `toHash` method will generate a hash for your object. You will be able to provide hash algorithm of your choice. We will use Java's `java.security.MessageDigest` to generate the hash code.
 
 Before we write our own AST transformation let's look at AST transformation that you see every day. Let's suppose we have a simple Groovy class `Book` that has two fields `title` and `author`.
 
@@ -23,10 +23,10 @@ class BookTest {
 
         def book = new Book()
         book.setTitle("OpenShift Cookbook")
-        book.setAuthor("Shekhar Gulati")
+        book.setAuthor("Shifath Nafis")
 
         assertThat(book.getTitle(), equalTo("OpenShift Cookbook"))
-        assertThat(book.getAuthor(), equalTo("Shekhar Gulati"))
+        assertThat(book.getAuthor(), equalTo("Shifath Nafis"))
 
     }
 }
@@ -274,7 +274,3 @@ Let's understand the code shown above:
 Now, run your test case and it will pass.
 
 ------
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/45](https://github.com/shekhargulati/52-technologies-in-2016/issues/45).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/32-groovy-ast-transformations)](https://github.com/igrigorik/ga-beacon)

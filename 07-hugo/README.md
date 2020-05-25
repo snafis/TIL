@@ -3,8 +3,6 @@ Hugo: A Modern WebSite Engine That Just Works
 
 This week I decided to take a break from Scala and scratch my own itch my building an online bookshelf using Hugo. **[Hugo](https://gohugo.io/)** is a static site generator written in Go programming language. You can use it for building modern static websites. Static site generator takes your content files written in a markup language like [Markdown](https://en.wikipedia.org/wiki/Markdown), apply layouts you have defined, and generate static HTML files that can be delivered to the user. Static websites are nothing new, they date back to the [first ever website](http://info.cern.ch/hypertext/WWW/TheProject.html) in human history. We started with static websites, then moved to dynamic websites, and finally we are moving back to static websites for use-cases where it make sense. Most common use-cases for static websites are blogs, product documentation, help guides, tutorials, online portfolio or resume.
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
-
 Static generators again came into limelight after the introduction of [Jekyll](https://jekyllrb.com/) in 2008. Jekyll is a static website generator written in Ruby. It was created by Github co-founder Tom Preston-Werner. Because Jekyll was created by Github co-founder, it has very good integration with Github. It was very easy to get your website running on Github pages.
 
 Another reason static site generators are back in popularity has to do with a lot of advantages they offer. In my opinion, static generators offer following advantages:
@@ -133,7 +131,7 @@ Let's now add a post to our `bookshelf`. We will use the `hugo new` command to a
 $ hugo new post/good-to-great.md
 ```
 ```
-/Users/shekhargulati/bookshelf/content/post/good-to-great.md created
+/Users/snafis/bookshelf/content/post/good-to-great.md created
 ```
 
 The above command will create a new directory `post` inside the `content` directory and create `good-to-great.md` file inside it.
@@ -194,7 +192,7 @@ $ hugo server
 0 tags created
 0 categories created
 in 9 ms
-Watching for changes in /Users/shekhargulati/bookshelf/{data,content,layouts,static}
+Watching for changes in /Users/snafis/bookshelf/{data,content,layouts,static}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
@@ -218,7 +216,7 @@ $ hugo server --buildDrafts
 0 tags created
 0 categories created
 in 6 ms
-Watching for changes in /Users/shekhargulati/bookshelf/{data,content,layouts,static}
+Watching for changes in /Users/snafis/bookshelf/{data,content,layouts,static}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
@@ -256,7 +254,7 @@ $ hugo server --theme=hugo_theme_robust --buildDrafts
 0 tags created
 0 categories created
 in 10 ms
-Watching for changes in /Users/shekhargulati/bookshelf/{data,content,layouts,static,themes}
+Watching for changes in /Users/snafis/bookshelf/{data,content,layouts,static,themes}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
@@ -264,7 +262,7 @@ Press Ctrl+C to stop
 
 > ** If Hugo will not find a specific theme in the `themes` directory then it will throw an exception as shown below.**
 ```
-FATAL: 2016/02/14 Unable to find theme Directory: /Users/shekhargulati/bookshelf/themes/robust
+FATAL: 2016/02/14 Unable to find theme Directory: /Users/snafis/bookshelf/themes/robust
 ```
 
 To view your website, you can go to http://localhost:1313/. You will see as shown below.
@@ -313,10 +311,10 @@ The website uses the dummy values specified in the `config.toml`. Let's update t
 ```toml
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
-title = "Shekhar Gulati Book Reviews"
+title = "Shifath Nafis Book Reviews"
 
 [Params]
-  Author = "Shekhar Gulati"
+  Author = "Shifath Nafis"
 ```
 
 Hugo has inbuilt support for live reloading. So, as soon as you save your changes it will apply the change and reload the web page. You will see changes as shown below.
@@ -326,7 +324,7 @@ Hugo has inbuilt support for live reloading. So, as soon as you save your change
 The same is reflected in the Hugo server logs as well. As soon as the configuration is changed, it applied the changes.
 
 ```
-Config file changed: /Users/shekhargulati/bookshelf/config.toml
+Config file changed: /Users/snafis/bookshelf/config.toml
 1 of 1 draft rendered
 0 future content
 1 pages created
@@ -436,8 +434,8 @@ Disqus allows you to integrate comments in your static blog. To enable Disqus, y
 
 ```
 [Params]
-  Author = "Shekhar Gulati"
-  disqusShortname = "shekhargulati"
+  Author = "Shifath Nafis"
+  disqusShortname = "snafis"
 ```
 
 Now, commenting will be enabled in your blog.
@@ -459,7 +457,7 @@ $ hugo --theme=hugo_theme_robust
 in 17 ms
 ```
 
-> **Make sure to change the baseurl. For my bookshelf on Github pages, url is [https://shekhargulati.github.io/bookshelf](https://shekhargulati.github.io/bookshelf)**
+> **Make sure to change the baseurl. For my bookshelf on Github pages, url is [https://snafis.github.io/bookshelf](https://snafis.github.io/bookshelf)**
 
 After you run the hugo command, a public directory will be created with the generated website source.
 
@@ -472,7 +470,7 @@ Create a new repository with name `bookshelf` on Github. Once created, create a 
 $ mkdir bookshelf-public
 $ cd bookshelf-public
 $ git init
-$ git remote add origin git@github.com:shekhargulati/bookshelf.git
+$ git remote add origin git@github.com:snafis/bookshelf.git
 ```
 
 Copy the content of the `public` directory to the `bookshelf-public` directory. Run this command from with in the `bookshelf-public` directory.
@@ -496,10 +494,6 @@ $ git commit -am "bookshelf added"
 $ git push origin gh-pages
 ```
 
-In couple of minutes, your website will be live https://shekhargulati.github.io/bookshelf/.
+In couple of minutes, your website will be live https://snafis.github.io/bookshelf/.
 
-----
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/10](https://github.com/shekhargulati/52-technologies-in-2016/issues/10).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/07-hugo)](https://github.com/igrigorik/ga-beacon)

@@ -1,7 +1,7 @@
-Webpack: The Missing Tutorial &trade; [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/shekhargulati/52-technologies-in-2016/blob/master/36-webpack/README.md)](http://ttr.myapis.xyz/)
+Webpack: The Missing Tutorial &trade; [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/snafis/TIL/blob/master/36-webpack/README.md)](http://ttr.myapis.xyz/)
 ---
 
-Welcome to the thirty-sixth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I started learning [React](https://github.com/facebook/react) for one of my personal side project but soon I discovered that I should learn webpack before. webpack is the module bundler of choice for the react community so sooner or later you will have to learn it. I had no idea about webpack so I decided to spend some time understanding and learning about it. I am primarily a backend developer so it becomes difficult for me to remain up to date with the front end ecosystem. Last time I was working with front end, I used to use tools like Grunt and Bower. I know many people moved from Grunt to Gulp as Gulp is considered more performant and it follows code over configuration paradigm. If you are Java developer then you can think Grunt as Maven and Gulp as Gradle. In this blog, we will start with webpack basics and then move to its usage. Nowadays, gulp, grunt, and bower are considered old school and cool kids have started using webpack.
+Welcome to the thirty-sixth blog of [TIL](https://github.com/snafis/TIL) blog series. This week I started learning [React](https://github.com/facebook/react) for one of my personal side project but soon I discovered that I should learn webpack before. webpack is the module bundler of choice for the react community so sooner or later you will have to learn it. I had no idea about webpack so I decided to spend some time understanding and learning about it. I am primarily a backend developer so it becomes difficult for me to remain up to date with the front end ecosystem. Last time I was working with front end, I used to use tools like Grunt and Bower. I know many people moved from Grunt to Gulp as Gulp is considered more performant and it follows code over configuration paradigm. If you are Java developer then you can think Grunt as Maven and Gulp as Gradle. In this blog, we will start with webpack basics and then move to its usage. Nowadays, gulp, grunt, and bower are considered old school and cool kids have started using webpack.
 
 ## Why we need webpack?
 
@@ -42,7 +42,7 @@ Let's now look at the `profile.js` which uses our JavaScript libraries. We enclo
 ```javascript
 (function(){
   var user = {
-    name : "Shekhar Gulati",
+    name : "Shifath Nafis",
     messages : [
       "hello",
       "bye",
@@ -106,7 +106,7 @@ Now we will update `profile.js` to use our `timeline` module. We can even create
 ```javascript
 var timeline = require('./timeline.js');
 var user = {
-  name : "Shekhar Gulati",
+  name : "Shifath Nafis",
   messages : [
     "hello",
     "bye",
@@ -231,7 +231,7 @@ This time the webpack process will not shutdown and keep running. As you make ch
 
 ```javascript
 var user = {
-  name : "Shekhar Gulati!!!",
+  name : "Shifath Nafis!!!",
   messages : [
     "hello",
     "bye",
@@ -254,7 +254,7 @@ To test it you can add a debugger statement in profile.js as shown below.
 ```javascript
 var timeline = require('./timeline.js');
 var user = {
-  name : "Shekhar Gulati",
+  name : "Shifath Nafis",
   messages : [
     "hello",
     "bye",
@@ -282,7 +282,7 @@ require('../css/style.css');
 
 var timeline = require('./timeline.js');
 var user = {
-  name : "Shekhar Gulati",
+  name : "Shifath Nafis",
   messages : [
     "hello",
     "bye",
@@ -299,7 +299,7 @@ webpack will reload the changes, and you will see error in the console as shown 
 
 ```
 ERROR in ./css/style.css
-Module parse failed: /Users/shekhargulati/dev/52-technologies-in-2016/36-webpack/code/css/style.css Unexpected token (1:0)
+Module parse failed: /Users/snafis/dev/TIL/36-webpack/code/css/style.css Unexpected token (1:0)
 You may need an appropriate loader to handle this file type.
 ```
 
@@ -418,8 +418,4 @@ module.exports = {
 
 -----
 
-That's all for this week. There are many more goodies in webpack. You can read more about that in webpack [documentation](http://webpack.github.io/docs/).
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/48](https://github.com/shekhargulati/52-technologies-in-2016/issues/48).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/36-webpack)](https://github.com/igrigorik/ga-beacon)
+ There are many more goodies in webpack. You can read more about that in webpack [documentation](http://webpack.github.io/docs/).

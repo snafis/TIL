@@ -1,9 +1,9 @@
 Using Docker Containers As Cron Jobs
 ----
 
-Welcome to the fortieth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I was working on a problem that required cron jobs. The use case was that after user registers with the application, we will create a cron job that will track his/her social activities. We will have one container per user. I wanted to keep cron jobs to work in a different process from the main application so that different concerns of the application don't intermingle. In my view, containers provide the right abstraction to solve this use case. The added advantage that we achieve by using Docker containers is that we can configure their restart policy. This means if a container goes down for some reason it will be restarted automatically.  I kept these containers dumb so the only thing container had to do is to make an HTTP request to fetch the data and store that in the database. In this post, I will share how I did it.
+Welcome to the fortieth post of [TIL](https://github.com/snafis/TIL) blog series. This week I was working on a problem that required cron jobs. The use case was that after user registers with the application, we will create a cron job that will track his/her social activities. We will have one container per user. I wanted to keep cron jobs to work in a different process from the main application so that different concerns of the application don't intermingle. In my view, containers provide the right abstraction to solve this use case. The added advantage that we achieve by using Docker containers is that we can configure their restart policy. This means if a container goes down for some reason it will be restarted automatically.  I kept these containers dumb so the only thing container had to do is to make an HTTP request to fetch the data and store that in the database. In this post, I will share how I did it.
 
-> **This post assumes you know how to work with Docker containers. In case you are new to Docker, you can read [my getting started post on Docker](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/39-docker/README.md).**
+> **This post assumes you know how to work with Docker containers. In case you are new to Docker, you can read [my getting started post on Docker](https://github.com/snafis/TIL/blob/master/39-docker/README.md).**
 
 ## Creating a container for cron jobs
 
@@ -37,7 +37,7 @@ Now, we will create a `Dockerfile` that will build the required container.
 
 ```docker
 FROM python:2.7
-MAINTAINER "Shekhar Gulati"
+MAINTAINER "Shifath Nafis"
 RUN apt-get update -y
 RUN apt-get install cron -yqq
 COPY crontab /etc/cron.d/github-status-cron
@@ -150,7 +150,7 @@ We will also have to update Dockerfile so that it runs the bash script at startu
 
 ```docker
 FROM python:2.7
-MAINTAINER "Shekhar Gulati"
+MAINTAINER "Shifath Nafis"
 RUN apt-get update -y
 RUN apt-get install cron -yqq
 COPY crontab /tmp/my_cron
@@ -184,9 +184,3 @@ hello
 ```
 
 ----
-
-That's all for this week.
-
-Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/63](https://github.com/shekhargulati/52-technologies-in-2016/issues/63).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/40-docker-cron)](https://github.com/igrigorik/ga-beacon)

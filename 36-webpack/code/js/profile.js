@@ -2,7 +2,7 @@ require('../css/style.css');
 
 var timeline = require('./timeline.js');
 var user = {
-  name : "Shekhar Gulati",
+  name : "Shifath Nafis",
   messages : [
     "hello",
     "bye",

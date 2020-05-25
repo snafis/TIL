@@ -1,4 +1,4 @@
-package com.shekhargulati.peoplecounter;
+package com.snafis.peoplecounter;
 
 import java.util.Objects;
 

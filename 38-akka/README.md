@@ -1,7 +1,7 @@
 Actor System Termination on JVM Shutdown
 ----
 
-Welcome to the thirty-eight post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. In my day job, I work on a backend system that uses Akka. [Akka](http://akka.io/) is a toolkit and runtime for building highly concurrent, distributed and resilient message driven systems. I will write an in-depth Akka tutorial some other week. This week I will talk about a specific problem that I was trying to solve. We have two applications that talk over each other via [Akka remoting](http://doc.akka.io/docs/akka/current/scala/remoting.html). First application can shutdown the second application programmatically by sending a message to the second application ActorSystem.  Shutdown here means you can exit the JVM. To make sure we do a clean shutdown, we added JVM shutdown hook that terminates the ActorSystem.
+Welcome to the thirty-eight post of [TIL](https://github.com/snafis/TIL) blog series. In my day job, I work on a backend system that uses Akka. [Akka](http://akka.io/) is a toolkit and runtime for building highly concurrent, distributed and resilient message driven systems. I will write an in-depth Akka tutorial some other week. This week I will talk about a specific problem that I was trying to solve. We have two applications that talk over each other via [Akka remoting](http://doc.akka.io/docs/akka/current/scala/remoting.html). First application can shutdown the second application programmatically by sending a message to the second application ActorSystem.  Shutdown here means you can exit the JVM. To make sure we do a clean shutdown, we added JVM shutdown hook that terminates the ActorSystem.
 
 This was implemented as shown below.
 
@@ -169,9 +169,3 @@ ActorSystem terminated
 ```
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/57](https://github.com/shekhargulati/52-technologies-in-2016/issues/57).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/38-akka)](https://github.com/igrigorik/ga-beacon)

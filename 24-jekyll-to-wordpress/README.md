@@ -1,7 +1,7 @@
 Saved My Ass: Moving back to WordPress from Jekyll
 ----------
 
-Welcome to week 24 of [52-technology-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will share how I moved my organization's official blog from Jekyll to WordPress. A year back, I had moved the official blog from WordPress to Jekyll because I wanted to define the blog publishing workflow. I wanted to apply the pull request based workflow to blog publishing. The idea was simple - write a blog, raise a pull request, get it reviewed (for grammar and other content related feedback), incorporate changes, and finally a blog administrator would press the merge button and the blog will be published. Being a programmer, this all made sense to me. Our organization mainly consists of programmers so it made sense to have developer oriented workflow.
+Welcome to week 24 of [TIL](https://github.com/snafis/TIL) blog series. This week I will share how I moved my organization's official blog from Jekyll to WordPress. A year back, I had moved the official blog from WordPress to Jekyll because I wanted to define the blog publishing workflow. I wanted to apply the pull request based workflow to blog publishing. The idea was simple - write a blog, raise a pull request, get it reviewed (for grammar and other content related feedback), incorporate changes, and finally a blog administrator would press the merge button and the blog will be published. Being a programmer, this all made sense to me. Our organization mainly consists of programmers so it made sense to have developer oriented workflow.
 
 As it turned out, it was not a wise decision by me and we decided to move back to WordPress. In this blog, I will share my experience and learnings that I had during this process. **To me, it was like a software project that went wrong because you had decided to rewrite an existing software project. Rewrites are always costly and most of the time they don't deliver the business value that one expects**.
 
@@ -212,7 +212,3 @@ Once you are happy that all the content is cleanly uploaded into your local Word
 Now you can share the exported XML with the team.
 
 ------
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/30](https://github.com/shekhargulati/52-technologies-in-2016/issues/30).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/24-jekyll-to-wordpress)](https://github.com/igrigorik/ga-beacon)

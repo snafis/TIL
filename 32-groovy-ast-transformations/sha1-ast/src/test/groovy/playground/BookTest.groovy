@@ -10,10 +10,10 @@ class BookTest {
     @Test
     void 'should be able to set author and title of a book'() {
 
-        def book = new Book("OpenShift Cookbook", "Shekhar Gulati")
+        def book = new Book("OpenShift Cookbook", "Shifath Nafis")
 
         assertThat(book.getTitle(), equalTo("OpenShift Cookbook"))
-        assertThat(book.getAuthor(), equalTo("Shekhar Gulati"))
+        assertThat(book.getAuthor(), equalTo("Shifath Nafis"))
     }
 
 

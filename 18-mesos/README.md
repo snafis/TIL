@@ -1,7 +1,7 @@
 Getting Started with Apache Mesos
 ----
 
-Welcome to eighteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week we will learn about [Apache Mesos](http://mesos.apache.org/) -- an open source cluster manager and scheduler for your datacenter. We will begin this series with an introduction of Apache Mesos covering why it exists and what it can do for us. After covering the why and what of Apache Mesos, we will install Mesos inside a [Vagrant box provided by Mesosphere](https://github.com/mesosphere/playa-mesos) and use it.
+Welcome to eighteenth week of [TIL](https://github.com/snafis/TIL) blog series. This week we will learn about [Apache Mesos](http://mesos.apache.org/) -- an open source cluster manager and scheduler for your datacenter. We will begin this series with an introduction of Apache Mesos covering why it exists and what it can do for us. After covering the why and what of Apache Mesos, we will install Mesos inside a [Vagrant box provided by Mesosphere](https://github.com/mesosphere/playa-mesos) and use it.
 
 ## Lets go down the memory lane##
 
@@ -169,9 +169,3 @@ Now if you go to Mesos web interface and navigate to the slave, you will see tha
 
 
 -----
-
-That's all for this week.
-
-Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/23](https://github.com/shekhargulati/52-technologies-in-2016/issues/23).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/18-mesos)](https://github.com/igrigorik/ga-beacon)

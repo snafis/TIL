@@ -1,7 +1,7 @@
 Load testing with bees
 ---
 
-Welcome to the nineteenth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I discovered a Python utility called [**beeswithmachineguns**](https://github.com/newsapps/beeswithmachineguns) that can load test a web application by launching many micro EC2 instances. In this short blog, I will cover how to get started with this utility.
+Welcome to the nineteenth blog of [TIL](https://github.com/snafis/TIL) blog series. This week I discovered a Python utility called [**beeswithmachineguns**](https://github.com/newsapps/beeswithmachineguns) that can load test a web application by launching many micro EC2 instances. In this short blog, I will cover how to get started with this utility.
 
 > **From the [project site](https://github.com/newsapps/beeswithmachineguns#the-caveat-please-read): If you decide to use the Bees, please keep in mind the following important caveat: they are, more-or-less a distributed denial-of-service attack in a fancy package and, therefore, if you point them at any server you don’t own you will behaving unethically, have your Amazon Web Services account locked-out, and be liable in a court of law for any downtime you cause.**
 
@@ -120,7 +120,3 @@ The `attack` command opens a SSH connection using the `paramiko` API using the `
 
 
 ----
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/24](https://github.com/shekhargulati/52-technologies-in-2016/issues/24).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/19-bees)](https://github.com/igrigorik/ga-beacon)

@@ -1,7 +1,7 @@
 Building A Lightweight Scala REST API Client with OkHttp
 ----
 
-Welcome to the sixth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. In this blog, we will learn how to write Scala REST API client for [Medium](https://medium.com/)'s REST API using [OkHttp](https://github.com/square/okhttp) library. [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) APIs have become a standard method of communication between two devices over a network. Most applications expose their REST API that developers can use to get work with an application programmatically. For example, if I have to build a realtime opinion mining application then I can use Twitter or Facebook REST APIs to get hold of their data and build my application. To work with an application REST APIs, you either can write your own client or you can use one of the language specific client provided by the application. Last few weeks, I have started using [Medium](https://medium.com/) for posting non-technical blogs. Medium is a blog publishing platform created by Twitter co-founder <a href="https://en.wikipedia.org/wiki/Evan_Williams_(Internet_entrepreneur)">Evan Williams</a>. Evan Williams is the same guy who earlier created <a href="https://en.wikipedia.org/wiki/Blogger_(service)">Blogger</a>, which was bought by Google in 2003.
+This week, we will learn how to write Scala REST API client for [Medium](https://medium.com/)'s REST API using [OkHttp](https://github.com/square/okhttp) library. [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) APIs have become a standard method of communication between two devices over a network. Most applications expose their REST API that developers can use to get work with an application programmatically. For example, if I have to build a realtime opinion mining application then I can use Twitter or Facebook REST APIs to get hold of their data and build my application. To work with an application REST APIs, you either can write your own client or you can use one of the language specific client provided by the application. Last few weeks, I have started using [Medium](https://medium.com/) for posting non-technical blogs. Medium is a blog publishing platform created by Twitter co-founder <a href="https://en.wikipedia.org/wiki/Evan_Williams_(Internet_entrepreneur)">Evan Williams</a>. Evan Williams is the same guy who earlier created <a href="https://en.wikipedia.org/wiki/Blogger_(service)">Blogger</a>, which was bought by Google in 2003.
 
 Medium exposed their REST API to the external world last year. The API is simple and allows you to do operations like submitting a post, getting details of the authenticated user, getting publications for a user, etc. You can read about Medium API documentation in their [Github repository](https://github.com/Medium/medium-api-docs). Medium officially provides REST API clients for [Node.js](https://github.com/Medium/medium-sdk-nodejs), [Python](https://github.com/Medium/medium-sdk-python), and [Go](https://github.com/Medium/medium-sdk-go) programming languages. I couldn't find Scala client for Medium REST API so I decided to write my own client using OkHttp.
 
@@ -45,7 +45,7 @@ Although, OkHttp is a Java library but it works great with Scala. I know it migh
 
 ## Github repository
 
-The code for today’s application is available on github: [medium-scala-client](./medium-scala-client). In this blog, I will only cover couple of REST endpoints. You can view the full source of [medium-scala-sdk here](https://github.com/shekhargulati/medium-scala-sdk).
+The code for today’s application is available on github: [medium-scala-client](./medium-scala-client). In this blog, I will only cover couple of REST endpoints. You can view the full source of [medium-scala-sdk here](https://github.com/snafis/medium-scala-sdk).
 
 ## Getting Started
 
@@ -133,9 +133,9 @@ describe("MediumClientSpec") {
         |{
         |  "data": {
         |    "id": "123",
-        |    "username": "shekhargulati",
-        |    "name": "Shekhar Gulati",
-        |    "url": "https://medium.com/@shekhargulati",
+        |    "username": "snafis",
+        |    "name": "Shifath Nafis",
+        |    "url": "https://medium.com/@snafis",
         |    "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*pC-eYQUV-iP2Y10_LgGvwA.jpeg"
         |  }
         |}
@@ -153,9 +153,9 @@ describe("MediumClientSpec") {
     val user = medium.getUser
     user should have(
       'id ("123"),
-      'username ("shekhargulati"),
-      'name ("Shekhar Gulati"),
-      'url ("https://medium.com/@shekhargulati"),
+      'username ("snafis"),
+      'name ("Shifath Nafis"),
+      'url ("https://medium.com/@snafis"),
       'imageUrl ("https://cdn-images-1.medium.com/fit/c/200/200/1*pC-eYQUV-iP2Y10_LgGvwA.jpeg")
     )
   }
@@ -283,9 +283,9 @@ Received response
 {
   "data": {
     "id": "123",
-    "username": "shekhargulati",
-    "name": "Shekhar Gulati",
-    "url": "https://medium.com/@shekhargulati",
+    "username": "snafis",
+    "name": "Shifath Nafis",
+    "url": "https://medium.com/@snafis",
     "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*pC-eYQUV-iP2Y10_LgGvwA.jpeg"
   }
 }
@@ -443,8 +443,3 @@ Now, compile the code and run the test case. Both test cases will pass now.
 ## Conclusion
 
 This week we learnt how to write REST API using OkHttp library. We covered how to make HTTP GET and POST requests using OkHttp. OkHttp supports all HTTP methods like head, delete, put, etc. You can also use OKHttp to [make asynchronous calls](https://github.com/square/okhttp/wiki/Recipes#asynchronous-get). You can refer to [OkHttp documentation](https://github.com/square/okhttp/wiki) for more details.
-
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/8](https://github.com/shekhargulati/52-technologies-in-2016/issues/8).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/06-okhttp)](https://github.com/igrigorik/ga-beacon)

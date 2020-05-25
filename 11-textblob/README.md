@@ -1,13 +1,13 @@
 Sentiment Analysis in Python with TextBlob
 -----
 
-Welcome to the eleventh blog of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)  blog series. If you are following this series then you would have probably noticed that I already wrote week 11 blog on [tweet deduplication](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/11-tweet-deduplication). I was not happy with the content so I decide to write another blog for week 11.
+Welcome to the eleventh blog of [TIL](https://github.com/snafis/TIL)  blog series. If you are following this series then you would have probably noticed that I already wrote week 11 blog on [tweet deduplication](https://github.com/snafis/TIL/tree/master/11-tweet-deduplication). I was not happy with the content so I decide to write another blog for week 11.
 
-In week 11, I decided to spend time to learn about text processing using the Python programming language. We will only focus on Sentiment Analysis in this blog. I have written about sentiment analysis multiple times in last few years. We learnt how to do sentiment analysis in Scala using Stanford CoreNLP in [week 3 blog](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/03-stanford-corenlp). Sentiment analysis gives you the power to mine emotions in text. This can help you build awesome applications that understand human behavior. Few years back, I built an application that helped me decide if I should watch a movie or not by doing sentiment analysis on social media data for a movie. There are many possible applications of Sentiment analysis like understanding customer sentiment for a product by analysis of reviews.
+In week 11, I decided to spend time to learn about text processing using the Python programming language. We will only focus on Sentiment Analysis in this blog. I have written about sentiment analysis multiple times in last few years. We learnt how to do sentiment analysis in Scala using Stanford CoreNLP in [week 3 blog](https://github.com/snafis/TIL/tree/master/03-stanford-corenlp). Sentiment analysis gives you the power to mine emotions in text. This can help you build awesome applications that understand human behavior. Few years back, I built an application that helped me decide if I should watch a movie or not by doing sentiment analysis on social media data for a movie. There are many possible applications of Sentiment analysis like understanding customer sentiment for a product by analysis of reviews.
 
 In this blog, I will talk about a Python package called [TextBlob](https://textblob.readthedocs.org/) which can help developers solve understand sentiments in their text. We will first cover some basics, and then we will develop a simple Python Flask application which will use the TextBlob API.
 
-> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+> **This blog is part of my year long blog series [TIL](https://github.com/snafis/TIL)**
 
 ## What is TextBlob?
 
@@ -189,13 +189,9 @@ Copy the content to the index.html source file which uses Twitter Boostrap to ad
 To deploy the application on OpenShift, you have to first install its command-line tool `rhc` and then just type the command shown below.
 
 ```
-$ rhc create-app sentimentanalyzer python-2.7 --from-code https://github.com/shekhargulati/sentiment-analyzer.git --timeout 180
+$ rhc create-app sentimentanalyzer python-2.7 --from-code https://github.com/snafis/sentiment-analyzer.git --timeout 180
 ```
 
 It will do all the stuff from creating an application, to setting up public DNS, to creating private git repository, and then finally deploying the application using code from my Github repository.The application will be deployed on http://sentimentanalyzer-{domain-name}.rhcloud.com. Please replace {domain-name} with your account domain name. The app is running here [https://sentimentanalysis-52tech.rhcloud.com/](https://sentimentanalysis-52tech.rhcloud.com/)
 
 -----
-
-That's all for this week. Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/15](https://github.com/shekhargulati/52-technologies-in-2016/issues/15).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/11-textblob)](https://github.com/igrigorik/ga-beacon)

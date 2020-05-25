@@ -1,9 +1,9 @@
 Slick 3: Functional Relational Mapping for Mere Mortals Part 2: Querying data
 ----
 
-Last week we learnt the [basics of Slick](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/04-slick) library. We started with a general introduction of Slick, then covered how to define a table definition, custom mappers, and perform insert queries. Today, we will learn how to perform `select` queries with Slick. Slick allows you to work with database tables in the same way as you work with Scala collections. This means that you can use methods like `map`, `filter`, `sort`, etc. to process data in your table.
+Last week we learnt the [basics of Slick](https://github.com/snafis/TIL/tree/master/04-slick) library. We started with a general introduction of Slick, then covered how to define a table definition, custom mappers, and perform insert queries. Today, we will learn how to perform `select` queries with Slick. Slick allows you to work with database tables in the same way as you work with Scala collections. This means that you can use methods like `map`, `filter`, `sort`, etc. to process data in your table.
 
-> **In case you are new to Slick, please first read [part 1 of Slick tutorial](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/04-slick). This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+> **In case you are new to Slick, please first read [part 1 of Slick tutorial](https://github.com/snafis/TIL/tree/master/04-slick). 
 
 ## Github repository
 
@@ -366,7 +366,3 @@ There are many more aggregate functions like `max`, `min`, `average` that you ca
 ## Conclusion
 
 Today, we looked at how we can use the Slick library to query our data. If you have used Scala collections or Java 8 Streams you should feel home. We still haven't covered many other important Slick topics like joins, profiles, working with real databases like MySQL or PostgreSQL, etc.  I will write at least one more post about Slick so that we have good understanding of it.
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/7](https://github.com/shekhargulati/52-technologies-in-2016/issues/7).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/05-slick)](https://github.com/igrigorik/ga-beacon)

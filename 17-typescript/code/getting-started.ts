@@ -10,7 +10,7 @@ let title: string = "Learning TypeScript";
 let description: string = 'Learning TypeScript Today!'
 
 // String literals
-let fullname = "Shekhar Gulati"
+let fullname = "Shifath Nafis"
 let summary = `${fullname} is ${title} this weekend.`
 
 // Arrays 

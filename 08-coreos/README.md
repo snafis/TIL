@@ -1,7 +1,7 @@
 CoreOS for Application Developers
 ----
 
-Welcome to eighth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week we will learn about [CoreOS](https://coreos.com/), an Open source Linux distribution built to run and manage highly scalable and fault tolerant systems. It is designed to `docker` and `rocket` containers. When I started learning about CoreOS, I was overwhelmed by its complexity and different components that you have to know and interact with like `etcd`, `systemd`, `fleet`, `Flannel`. I am not an Ops guy so CoreOS documentation and many tutorials that I found on the web didn't clicked with me. The goal of this tutorial is to help application developers understand why they should care about CoreOS and show them how to work with CoreOS cluster running on top of Amazon EC2.
+Welcome to eighth week of [TIL](https://github.com/snafis/TIL) blog series. This week we will learn about [CoreOS](https://coreos.com/), an Open source Linux distribution built to run and manage highly scalable and fault tolerant systems. It is designed to `docker` and `rocket` containers. When I started learning about CoreOS, I was overwhelmed by its complexity and different components that you have to know and interact with like `etcd`, `systemd`, `fleet`, `Flannel`. I am not an Ops guy so CoreOS documentation and many tutorials that I found on the web didn't clicked with me. The goal of this tutorial is to help application developers understand why they should care about CoreOS and show them how to work with CoreOS cluster running on top of Amazon EC2.
 
 ## What is CoreOS?
 
@@ -187,15 +187,15 @@ After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStartPre=/usr/bin/docker build -t="shekhargulati/ubuntu-curl" /home/core
-ExecStart=/usr/bin/docker run --name my-container1 shekhargulati/ubuntu-curl:latest /bin/sh -c "while true; do curl https://status.github.com/api/status.json; sleep 10;done"
+ExecStartPre=/usr/bin/docker build -t="snafis/ubuntu-curl" /home/core
+ExecStart=/usr/bin/docker run --name my-container1 snafis/ubuntu-curl:latest /bin/sh -c "while true; do curl https://status.github.com/api/status.json; sleep 10;done"
 ExecStop=/usr/bin/docker stop my-container1
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-In the unit file shown above, we created a Docker image `shekhargulati/ubuntu-curl` using the Dockerfile present at `/home/core` directory. Dockerfile is shown below.
+In the unit file shown above, we created a Docker image `snafis/ubuntu-curl` using the Dockerfile present at `/home/core` directory. Dockerfile is shown below.
 
 ```
 FROM ubuntu:latest
@@ -237,7 +237,7 @@ As we packaged our github-status.service inside a Docker container, you can view
 ```
 core@ip-xx-xx-xx-xx ~ $ docker ps
 CONTAINER ID        IMAGE                              COMMAND                  CREATED             STATUS              PORTS               NAMES
-108ae4804d21        shekhargulati/ubuntu-curl:latest   "/bin/sh -c 'while tr"   15 minutes ago      Up 15 minutes                           my-container1
+108ae4804d21        snafis/ubuntu-curl:latest   "/bin/sh -c 'while tr"   15 minutes ago      Up 15 minutes                           my-container1
 ```
 
 You can stop the service using the systemctl as shown below. This will stop the docker container as well.
@@ -346,8 +346,4 @@ hello.service	f37a7daa.../10.153.148.154	active	running
 
 You can view status on individual hosts by running the `systemctl status hello.service` command.
 
-----
 
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/11](https://github.com/shekhargulati/52-technologies-in-2016/issues/11).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/08-coreos)](https://github.com/igrigorik/ga-beacon)

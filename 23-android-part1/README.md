@@ -5,7 +5,7 @@ Yesterday, I read an article which talked about an alarming issue of missing chi
 
 I understand that I can't build the full application over one weekend so I will be working on the application throughout June and July. I will write blogs covering different aspect of building an Android application. I am new to Android app development so we will go step by step. This week we will focus on capturing photo, storing photo in an album, and finally showing the captured photo for preview.
 
-> **If you are interested in working on this app with me, then please send me an email at <a href="mailto:shekhargulati84@gmail.com">shekhargulati84@gmail.com</a>. The source code for the application is not yet open source but I plan to make project open source it in near future. I am building this application as part of my [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series.**
+> **If you are interested in working on this app with me, then please send me an email at <a href="mailto:snafis84@gmail.com">snafis84@gmail.com</a>. The source code for the application is not yet open source but I plan to make project open source it in near future. I am building this application as part of my [TIL](https://github.com/snafis/TIL) blog series.**
 
 
 ## Missing Kid Tracker Application
@@ -67,13 +67,13 @@ Android Studio makes use of Gradle and Android Debug Bridge (or adb) to perform 
 
 ```
 06/11 19:25:16: Launching app
-$ adb push ~/MissingKidTracker/app/build/outputs/apk/app-debug.apk /data/local/tmp/com.shekhargulati.missingkidtracker
-$ adb shell pm install -r "/data/local/tmp/com.shekhargulati.missingkidtracker"
-	pkg: /data/local/tmp/com.shekhargulati.missingkidtracker
+$ adb push ~/MissingKidTracker/app/build/outputs/apk/app-debug.apk /data/local/tmp/com.snafis.missingkidtracker
+$ adb shell pm install -r "/data/local/tmp/com.snafis.missingkidtracker"
+	pkg: /data/local/tmp/com.snafis.missingkidtracker
 Success
 
 
-$ adb shell am start -n "com.shekhargulati.missingkidtracker/com.shekhargulati.missingkidtracker.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
+$ adb shell am start -n "com.snafis.missingkidtracker/com.snafis.missingkidtracker.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
 Connected to process 4001 on device samsung-gt_i9500-xxxx
 ```
 
@@ -86,7 +86,7 @@ In step 1, you created a skeleton application using the Android Studio. Now, we 
 	```xml
 	<?xml version="1.0" encoding="utf-8"?>
 	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	    package="com.shekhargulati.missingkidtracker">
+	    package="com.snafis.missingkidtracker">
 
 	    <application
 	        android:allowBackup="true"
@@ -250,7 +250,7 @@ To use the camera app, we will have to tell Android that we would like to use it
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shekhargulati.missingkidtracker">
+    package="com.snafis.missingkidtracker">
 
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -364,7 +364,7 @@ Last thing we have to do is to set the content of captured photo in the ImageVie
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.shekhargulati.missingkidtracker.MainActivity">
+    tools:context="com.snafis.missingkidtracker.MainActivity">
 
     <ImageView
         android:id="@+id/image_preview"
@@ -401,7 +401,7 @@ Update the `AndroidManifest.xml` to handle configuration changes.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shekhargulati.missingkidtracker">
+    package="com.snafis.missingkidtracker">
 
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -492,7 +492,3 @@ To avoid importing the wrong classes, please look carefully at the comment besid
 
 
 ------
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/29](https://github.com/shekhargulati/52-technologies-in-2016/issues/29).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/23-android-part1)](https://github.com/igrigorik/ga-beacon)

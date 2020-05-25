@@ -1,7 +1,7 @@
 Dropwizard: Your Java Library For Building Microservices
 ----
 
-Welcome to the thirtieth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I decided to spend time on [Dropwizard](http://www.dropwizard.io/1.0.0/docs/). Back in 2013, I first learnt about DropWizard when I was exploring Java micro-frameworks. [Dropwizard] impressed me a lot with its opinionated approach to building ops-friendly, high-performance RESTful backends. You can spin up REST backends in a matter of minutes taking your productivity to the next level. [Dropwizard](http://www.dropwizard.io/1.0.0/docs/) is an open source Java framework which was developed by Yammer to power their JVM based backend. It consists of following components :
+Welcome to the thirtieth post of [TIL](https://github.com/snafis/TIL) blog series. This week I decided to spend time on [Dropwizard](http://www.dropwizard.io/1.0.0/docs/). Back in 2013, I first learnt about DropWizard when I was exploring Java micro-frameworks. [Dropwizard] impressed me a lot with its opinionated approach to building ops-friendly, high-performance RESTful backends. You can spin up REST backends in a matter of minutes taking your productivity to the next level. [Dropwizard](http://www.dropwizard.io/1.0.0/docs/) is an open source Java framework which was developed by Yammer to power their JVM based backend. It consists of following components :
 
 * Embedded Jetty : Every application is packaged as a jar instead of war file and starts its own embedded jetty container. There is no WAR file and no external servlet container.
 
@@ -49,7 +49,7 @@ Finally, you will be asked to provide the name and location of the project. As w
 Open `build.gradle` and define couple of properties as shown below.
 
 ```gradle
-group 'com.shekhargulati'
+group 'com.snafis'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -173,7 +173,7 @@ public class IndexResource {
     public List<Blog> index() {
         return Collections.singletonList(
                 new Blog("Groovy AST Transformations By Example",
-                        "https://github.com/shekhargulati/52-technologies-in-2016/blob/master/32-groovy-ast-transformations/README.md"));
+                        "https://github.com/snafis/TIL/blob/master/32-groovy-ast-transformations/README.md"));
     }
 }
 ```
@@ -253,7 +253,7 @@ $ curl http://localhost:8080 |jq '.'
   {
     "id": "ec96b252-8dc7-4c84-b26b-d41dd479e8f7",
     "title": "Groovy AST Transformations By Example",
-    "url": "https://github.com/shekhargulati/52-technologies-in-2016/blob/master/32-groovy-ast-transformations/README.md",
+    "url": "https://github.com/snafis/TIL/blob/master/32-groovy-ast-transformations/README.md",
     "publishedOn": 1471290772422
   }
 ]
@@ -555,7 +555,7 @@ public void run(AppConfiguration configuration, Environment environment) throws 
 Run the `BlogApp` class as a Java application. To test the `BlogResource`, make a curl request as shown below:
 
 ```bash
-$ curl -i -X POST -H "Content-Type: application/json" -d '{"title":"Groovy AST Transformations By Example","url":"https://github.com/shekhargulati/52-technologies-in-2016/blob/master/32-groovy-ast-transformations/README.md"}' http://localhost:8080/blogs
+$ curl -i -X POST -H "Content-Type: application/json" -d '{"title":"Groovy AST Transformations By Example","url":"https://github.com/snafis/TIL/blob/master/32-groovy-ast-transformations/README.md"}' http://localhost:8080/blogs
 ```
 
 ## Step 9 : Update `IndexResource`
@@ -633,7 +633,3 @@ public void run(AppConfiguration configuration, Environment environment) throws 
 Run the `BlogApp` class as a Java application and test the application.
 
 ------
-
-That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/43](https://github.com/shekhargulati/52-technologies-in-2016/issues/43).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/30-dropwizard)](https://github.com/igrigorik/ga-beacon)

@@ -48,7 +48,7 @@
 	
 	var timeline = __webpack_require__(5);
 	var user = {
-	  name : "Shekhar Gulati",
+	  name : "Shifath Nafis",
 	  messages : [
 	    "hello",
 	    "bye",

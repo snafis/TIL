@@ -1,7 +1,7 @@
 Building `Read It Later` Mobile Application Using Ionic Framework
 ----
 
-Welcome to twenty-eighth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. The mobile application development space offers quite a range of development platforms. I am not going to talk about the pros and cons of each of these platforms. Instead, I will show you how to build a `Read It Later` hybrid mobile app using the [Ionic framework](http://ionicframework.com/). Hybrid mobile apps use mobile device browser to display its interface. Hybrid apps are built using web technologies like HTML, JavaScript, and CSS that most web programmers know and use. Ionic is a hybrid mobile application development framework and toolset that is built on top of [AngularJS](https://angularjs.org/) and [Apache Cordova](https://cordova.apache.org/). Ionic uses AngularJS as its web application framework of choice and Apache Cordova is used to access mobile features and packaging the native app.
+Welcome to twenty-eighth post of [TIL](https://github.com/snafis/TIL) blog series. The mobile application development space offers quite a range of development platforms. I am not going to talk about the pros and cons of each of these platforms. Instead, I will show you how to build a `Read It Later` hybrid mobile app using the [Ionic framework](http://ionicframework.com/). Hybrid mobile apps use mobile device browser to display its interface. Hybrid apps are built using web technologies like HTML, JavaScript, and CSS that most web programmers know and use. Ionic is a hybrid mobile application development framework and toolset that is built on top of [AngularJS](https://angularjs.org/) and [Apache Cordova](https://cordova.apache.org/). Ionic uses AngularJS as its web application framework of choice and Apache Cordova is used to access mobile features and packaging the native app.
 
 The idea behind `Read It Later` application is very simple. These days many Twitter users like (or favorite) a tweet to mark it for later read. Our application will subscribe to a user like feed and store it in a database and expose the read it later feed using a nice to use REST API. Our ionic based mobile application will consume the REST API and render the user his/her read it later feed.
 
@@ -19,7 +19,7 @@ The complete source code for the tutorial is available on [Github](./dailyreads)
 
 ## Building `Read It Later` REST API
 
-We will reuse the python based [`Read It Later`](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/16-newspaper) web application developed few weeks back. As stated above, application is built using [tweepy](https://pypi.python.org/pypi/tweepy), [newspaper](https://pypi.python.org/pypi/newspaper), and [flask](https://pypi.python.org/pypi/flask). We will add JSON based API to the application. In this tutorial, we will discuss application backend briefly. Please refer to the [original tutorial](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/16-newspaper) for more details.
+We will reuse the python based [`Read It Later`](https://github.com/snafis/TIL/tree/master/16-newspaper) web application developed few weeks back. As stated above, application is built using [tweepy](https://pypi.python.org/pypi/tweepy), [newspaper](https://pypi.python.org/pypi/newspaper), and [flask](https://pypi.python.org/pypi/flask). We will add JSON based API to the application. In this tutorial, we will discuss application backend briefly. Please refer to the [original tutorial](https://github.com/snafis/TIL/tree/master/16-newspaper) for more details.
 
 The application has a `LikedTweetsListener` which listens to tweets liked by a user. `LikedTweetsListener` is a sub class of `tweepy.streaming.StreamListener` provided by `tweepy` library. When an application receives a tweet, it builds a `newspaper.Article` and extracts information from it. Then, The complete info is saved in an in-memory list. When a user makes a GET request to the index `\` page, then a web page is built using the list and rendered via flask `render_template` function.
 
@@ -72,7 +72,7 @@ $ curl http://localhost:5000/api/bookmarks | jq '.'
 ]
 ```
 
-> **In the curl command shown above, we have used `jq` to pretty print JSON result. `jq` was covered in [week 20 post](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/20-json/README.md#project-2-jq).**
+> **In the curl command shown above, we have used `jq` to pretty print JSON result. `jq` was covered in [week 20 post](https://github.com/snafis/TIL/blob/master/20-json/README.md#project-2-jq).**
 
 This concludes our section on REST API backend. Let's build our mobile application now.
 
@@ -315,6 +315,6 @@ The application as of now offers a good test bed to learn and experiment more th
 
 ----------
 
-That's all for this post. Please provide your valuable feedback by posting a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/37](https://github.com/shekhargulati/52-technologies-in-2016/issues/37).
+That's all for this post. 37]/37).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/28-ionic)](https://github.com/igrigorik/ga-beacon)
+(/28-ionic)]
